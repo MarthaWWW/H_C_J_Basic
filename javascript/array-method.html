@@ -1,0 +1,121 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-25 16:41:00
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-25 19:20:10
+ * @FilePath: \code\front-end\javascript\array-method.html
+ * @Description: 数组常用方法
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //如何删除指定数据?
+        var arr=[3,5,6,4,1,2]
+        //数组.push()
+        //将数据追加到数组的末尾
+        //返回值时添加后数组的最新长度
+        console.log(arr.push("追加的"))
+
+        //数组.pop()
+        //删除数组的最后一个数据
+        //返回值就是最后一个数据
+        console.log(arr.pop())
+
+        //数组.unshift(数据)
+        //在数组的最前面添加一个数据
+        //返回值是添加后数组的最新长度
+        console.log(arr.unshift('嘿嘿我是第一个'))
+
+        //数组.shift(数据)
+        //在数组的最前面删除一个数据
+        //返回值是被删除的元素内容
+        console.log(arr.shift())
+
+        //数组.reverse()
+        //反转数组
+        //返回值就是反转后的数组
+        console.log(arr.reverse())
+
+        //数组.splice(开始索引(0)，多少个(0)，要插入的数据(null))
+        //删除数组的若干数据，并选择是否插入新的数据
+        //返回值以新数组的形式返回被删除的数据
+        console.log(arr.splice(1,2,11))
+        console.log(arr)
+
+        //数组.sort(),按位进行排列
+        //数组.sort(function(a,b){return a-b})，从小到大升序排列
+        //数组.sort(function(a,b){return b-a})，从大到小降序排列
+        //将数组排序
+        //返回值是排序好的数组
+        console.log(arr.sort())
+        console.log(arr.sort(function(a,b){return a-b}))
+        console.log(arr.sort(function(a,b){return b-a}))
+//---------------------------------------------------------------
+        //数组.join('连接符')
+        //将数组元素用连接符连接成一个字符串
+        //返回值是连接好的字符串,原始数组不会发生变化
+        console.log(arr.join('*'))
+
+        //数组.concat(其他数组)
+        //将其他数组和数组拼接在一起
+        //返回值是拼接好的数组,原始数组不会发生改变
+        console.log(arr.concat(['digi','ghetto']))
+
+        //数组.slice(开始索引(0)，结束索引(数组长度))
+        //截取数组中的某些数据
+        //返回值以新数组的形式返回截取内容，原始数组不会发生变化
+        console.log(arr.slice(0,3)) 
+        
+        //数组.indexOf(数据)
+        //查找数据在数组中的索引位置
+        //返回值是数据第一次出现的索引位置
+        console.log(arr.indexOf(11))
+
+        //数组.forEach(function(item,index,arr){})
+        //遍历数组，item是数组的每一项，index是索引
+        //没有返回值
+        arr.forEach(function(item,index,arr)
+        {
+            console.log(item)
+            console.log(index)
+            console.log(arr)
+            console.log('-------------------')
+        })
+
+        //数组.map(function(item,index,arr){})
+        //映射数组，在函数内以return的形式书写映射条件
+        //映射好的数组,原数组不变
+        console.log(arr.map(function(item,index,arr){
+            return item*10
+        }))
+
+        //数组.filter(function(item,index,arr){})
+        //过滤数组
+        //返回值是过滤好的新数组,在函数内以return的形式书写条件
+        console.log(arr.filter(function(item,index,arr){
+            return item>5
+        }))
+
+        //数组.every(function(item,index,arr){})
+        //判断数组是不是每一项都满足条件,在函数内以return的形式书写条件
+        //返回值是一个布尔值
+        console.log(arr.every(function(item,index,arr){
+            return item<15
+        }))
+
+        //数组.some(function(item,index,arr){})
+        //判断数组是不是某一项满足条件,在函数内以return的形式书写条件
+        //返回值是一个布尔值
+        console.log(arr.some(function(item,index,arr){
+            return item===11
+        }))
+    </script>
+</body>
+</html>

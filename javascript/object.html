@@ -1,0 +1,39 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-15 09:26:16
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-15 09:33:57
+ * @FilePath: \code\front-end\javascript\object.html
+ * @Description: 对象数据类型————可以放很多数据的盒子
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //对象：键值对的集合
+        var obj={
+            a:100,
+            b:true,
+            c:'hello world'
+        }
+        console.log(obj)
+        //对象的操作，增删改查
+        obj.name='Martha'
+        obj.gender='female'
+        console.log(obj)
+        //修改键值对的值
+        obj.name='Felicity'
+        obj['gender']='male'
+        console.log(obj)
+        //删除
+        delete obj.name
+        console.log(obj)
+    </script>
+</body>
+</html>

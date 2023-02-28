@@ -1,0 +1,61 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-05 22:23:30
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-06 19:53:29
+ * @FilePath: \code\.vscode\front-end\UI-state-pseudo-class-selector.html
+ * @Description: UI状态伪类选择器
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:enabled{
+            background-color: aqua;
+        }
+
+        input:disabled{
+            background-color:blueviolet;
+        }
+        /* 失效元素拥有的样式 */
+        input:focus{
+            background-color: chocolate;
+        }
+        /* 当前操作的元素拥有的样式 */
+
+        input[type=checkbox]{
+            /* 去掉默认样式 */
+            appearance: none;
+            width:20px;
+            height:20px;
+            border: 1px solid black
+        }
+        input:checked{
+            background-color:lightgreen;
+        }
+
+        div::selection
+        {
+            background-color: yellow;
+            color:blue;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+        用户名<input type="text"><br>
+        密码<input type="password"><br>
+        记住用户名<input type="checkbox"><br>
+        <input type="submit" disabled>
+    </form>
+
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore iste reiciendis doloribus, recusandae voluptatum deleniti obcaecati ipsam nobis ullam. Voluptates consequatur illum quam alias sint blanditiis voluptatibus dolores ipsum earum!
+    </div>
+</body>
+</html> 

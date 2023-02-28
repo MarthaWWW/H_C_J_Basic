@@ -1,0 +1,37 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-27 14:24:53
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-27 16:10:19
+ * @FilePath: \code\front-end\javascript\Object Oriented\OO5.html
+ * @Description: 面向对象-5：原型 prototype
+    + 定义：每一个函数天生自带一个属性，叫做prototype,是一个对象
+    + 构造函数也有自带的prototype
+    + 我们可以使用对象操作的语法，向prototype里面添加一些内容
+
+    对象：
+    + 每一个对象，在你访问他的成员的时候，如果自己没有这个属性
+      会自动去所属构造函数的prototype查找
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(name,age){
+            this.name=name
+            this.age=age
+        }
+
+        Person.prototype.sayHi = function(){console.log('hello world')}
+        console.log(Person.prototype)
+        var jack = new Person('Jack',18)
+        jack.sayHi()
+    </script>
+</body>
+</html>

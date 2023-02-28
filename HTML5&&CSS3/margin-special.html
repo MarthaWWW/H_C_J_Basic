@@ -1,0 +1,76 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-03-21 21:27:52
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-03-22 19:51:09
+ * @FilePath: \code\.vscode\hao\margin-special.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by Martha, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*1.垂直方向外边距取最大值
+          水平方向合并处理
+          2.父子关系，给子加外边距，作用于父身上
+          (1)父盒子的内边距等于子盒子的外边距，盒子的宽高会计算外元素，这样改变了父盒子的大小
+          需要编辑父盒子大小
+          (2)给父盒子设置边框
+          (3)加浮动使其不在一个图层
+          (4)给父盒子加上 overflow:hidden, BFC使其不受影响*/
+        .box1 ,.box2,.box3,.box4{
+            height: 100px;
+            width:100px;
+        }
+        .box1{
+            background-color: blueviolet;
+            margin-bottom:100px;
+        }
+        .box2{
+            background-color: aquamarine;
+            margin-top:50px;
+        }
+        .box3{
+            background-color:firebrick;
+            float:left;
+            margin-right:100px;
+        }
+        .box4{
+            background-color: darkcyan;
+            float:left;
+            margin-left:50px;
+        }
+        .box5{
+            width:200px;
+            height:200px;
+            background-color: chartreuse;
+            /*padding-top: 50px;*/
+            /*border:1px solid transparent;*/
+            overflow: hidden;
+        }
+        .box6{
+            width:100px;
+            height:100px;
+            background-color: cornflowerblue;
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div style="clear:left"></div>
+    <div class="box5">
+        <div class="box6"></div>
+    </div>
+</body>
+</html>

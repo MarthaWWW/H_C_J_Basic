@@ -1,0 +1,49 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-27 16:54:27
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-27 17:05:18
+ * @FilePath: \code\front-end\javascript\ES6\ES6-arrow-function.html
+ * @Description: ES6箭头函数
+    箭头函数，是ES6的语法中对函数表达式的简写
+    对于声明式函数不能使用
+
+    什么是函数表达式？
+        + 匿名函数
+        + 不需要单独定义函数，直接使用的位置
+        + xx.onclick = function(){}
+
+    箭头函数语法
+        + xx.onclick = () => {}
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        var fn1 = function () {console.log('我是fn1函数')}
+        fn1()
+
+        var fn2 = () => {console.log('我是fn2函数')}
+        fn2()
+        */
+        
+        //箭头函数的特殊之处
+        /*
+        1.箭头函数某些时候可以省略()
+          只有一个形参的时候
+        2.箭头函数某些时候可以省略()
+          当你的代码只有一句话的时候，自动把这一句话的结果当作函数返回值
+        3.箭头函数内没有arguments
+          */
+        var fn1 = (a,b) => a+b
+        console.log(fn1(10,20))
+    </script>
+</body>
+</html>

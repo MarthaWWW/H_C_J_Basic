@@ -1,0 +1,43 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-28 17:03:49
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-28 17:28:16
+ * @FilePath: \code\front-end\vue\v-html.html
+ * @Description: v-html 指令
+    防止XSS,CSRF
+    (1)前端过滤
+    (2)后台转义
+    (3)给cookie加上属性http
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        {{mytext}}
+        <!-- 此处不解析是为了防止脚本注入，很容易导致XSS攻击 -->
+        <div v-html="mytext"></div>
+    </div>
+    <script>
+        new Vue({
+            el:"#box",
+            data:{
+                mytext:"<b>加粗的</b>"
+                //防止后端数据库的格式问题
+                myhtml:``//再次引入HTML代码
+            },
+
+            methods:{
+                
+            }
+        })
+    </script>
+</body>
+</html>

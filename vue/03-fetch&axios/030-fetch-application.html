@@ -1,0 +1,67 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-29 19:57:04
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-30 21:11:22
+ * @FilePath: \code\front-end\vue\030-fetch-application.html
+ * @Description: fetch-application
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+    <style>
+        img{
+            width:100px;
+            height:140px;
+
+        }
+
+        li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <button @click="handleFetch">ajax-fetch</button>
+        <ul>
+            <li v-for="actor in actorlist">
+                {{actor.name}}
+                {{actor.role}} <br>
+                <img :src="actor.avatarAddress" alt=""><br>
+            </li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el:"#box",
+            data:{
+                actorlist:[]
+            },
+
+            methods:{
+                handleFetch(){
+                    //promise写法，兑现执行.then,没有对线执行.catch
+                    fetch("../json/maizuo.json")
+                    //console.log(res)
+                    //状态码，响应头，拿不到真正数据
+                    .then(res=>res.json())
+                    .then(res=>{
+                        this.actorlist=res.data.film.actors
+                        console.log(res)
+                    })
+                    .catch(err=>{
+                        console.log(err)
+                    })
+                    
+                }
+            }
+        })
+    </script>
+</body>
+</html>

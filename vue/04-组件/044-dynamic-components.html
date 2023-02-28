@@ -1,0 +1,99 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-30 21:18:42
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-05-02 11:13:25
+ * @FilePath: \code\front-end\vue\044-dynamic-components.html
+ * @Description: 动态组件
+    选项卡功能为例
+    点击列表来切换三个组件的显示
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        ul{
+            display: flex;
+            width:100%;
+            height: 40px;
+            position:fixed;
+            bottom: 0px;
+        }
+        li{
+            flex:1;
+            list-style: none;
+            border: 1px solid white;
+            text-align: center;
+            background-color: gray;
+            color:white;
+            line-height:40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <!-- 动态组件写法 -->
+        <keep-alive>
+            <component :is="which"></component>
+        </keep-alive>
+            
+        <!-- vue内置的component组件，动态绑定which状态 -->
+        <!-- 缺点：在组件中切换时之前的输入结果不见了,使用keep-alive来保存 -->
+
+
+        <!-- <home v-show="which==='home'">home</home>
+        <list v-show="which==='list'">list</list>
+        <shopcar v-show="which==='shopcar'">shopcar</shopcar> -->
+        <!-- 最基本的v-show写法，用which的值来辨识 -->
+        <footer>
+            <ul>
+                <li @click="which='home'">首页</li>
+                <li @click="which='list'">列表</li>
+                <li @click="which='shopcar'">购物车</li>
+            </ul>
+        </footer>
+    </div>
+    <script>
+        Vue.component("home",{
+            template:`
+                <div>
+                    home
+                <input type="search">
+                </div>`
+        })
+
+        Vue.component("list",{
+            template:`
+                <div>
+                    list
+                </div>`
+        })
+
+        Vue.component("shopcar",{
+            template:`
+                <div>
+                    shopccar
+                </div>`
+        })
+        var vm = new Vue({
+            el:"#box",
+            data:{
+                which:"home"
+            },
+
+            methods:{
+                
+            }
+        })
+    </script>
+</body>
+</html>

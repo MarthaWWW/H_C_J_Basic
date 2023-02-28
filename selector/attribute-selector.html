@@ -1,0 +1,68 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-05 21:45:38
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-05 22:04:49
+ * @FilePath: \code\.vscode\front-end\attribute-selector.html
+ * @Description: 属性选择器
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*属性选择器 [class,,]*/
+        div[class]{
+            background-color: blue;
+        }
+        /* 选择存在class属性的div标签 */
+        p[class]{
+            background-color: aqua;
+        }
+        /* 选择存在class属性的p标签 */
+        div[class=box1]
+        {
+            border: 1px solid red;
+        }
+        /* 选择class属性为box1的div标签，是完全匹配的 */
+        div[class~=box1]
+        {
+            border: 1px solid red;
+        }
+        /* 选择class属性包含box1的div标签，是包含写法 */
+        input[name]
+        {
+            background-color: chartreuse;
+        }
+
+        input[type=email]
+        {
+            background-color:goldenrod;
+        }
+        /* 模糊匹配
+           class^=b  开头是b
+           class$=b  结尾是b 
+           class*=b  包含b*/
+    </style>
+</head>
+<body>
+    <div class="box1">div-1</div>
+    <div class="box2">div-2</div>
+    <div class="box1 box3">div-2.5</div>
+    <div>div-3</div>
+    <p class="p1">p-1</p>
+    <p class="p2">p-2</p>
+    <p>p-3</p>
+
+    <div>
+        <h1>注册页面</h1>
+        用户名：<input type="text" name="username"><br>
+        密码：<input type="password" name="password"><br>
+        年龄：<input type="number" name="age"><br>
+        邮箱：<input type="email"><br>
+    </div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-05 14:51:20
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-05 15:43:48
+ * @FilePath: \code\.vscode\front-end\html5-2.html
+ * @Description: html5-2
+    HTML5新增语义化标签
+    方便爬虫
+    section: 页面中的一个内容区块   
+    article: 一块与上下文无关的独立的内容
+    aside: 在article之外的，与article内容相关的辅助信息
+    header: 页面中的一个内容区块或整个页面的标题
+    footer: 页面中的一个内容区块或整个页面的脚注
+    nav: 表示页面中导航链接部分
+    figure: 表示一段独立的流内容，使用figcaption元素为其添加标题
+    main: 页面中的主要内容
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html,body{
+            height:100%;
+        }
+
+        header,footer{
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background: coral;
+            color:white;
+            font-weight: bolder;
+            font-size: 30px;
+        }
+
+        section{
+            height: calc(100% - 100px);
+            background-color: grey;
+        }
+
+        nav, aside{
+            width:150px;
+            height:100%;
+            float:left;
+            color:white;
+            font-weight: bolder;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        nav{
+            margin-right:20px;
+        }
+
+        aside{
+            margin-left: 20px;
+        }
+
+        main{
+            float:left;
+            height:100%;
+            width: calc(100% - 340px);
+        }
+
+        nav,aside>div{
+            width: 150px;
+            height:50px;
+            line-height: 50px;
+        }
+
+        p{
+            color:white;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: left;
+            text-indent: 2;
+        }
+
+        article{
+            background-color: aliceblue;
+        }
+
+        article> p{
+            color: black;
+        }
+
+        main .article1{
+            height:calc(50% - 30px);
+            margin-top: 30px;
+        }
+
+        main .article2{
+            height:calc(50% - 60px);
+            margin-top: 30px;
+        }
+
+        a{
+            font-size: 18px;
+            color: white;
+            text-decoration: none ;
+            text-align: left;
+            line-height:20px;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <section>
+        <nav>
+            <div>nav</div>
+            <ul>
+                <li><a href="www.baidu.com" >Link1</a></li>
+                <hr>
+                <li><a href="www.google.com">Link2</a></li>
+                <hr>
+                <li><a href="www.bilibili.com">Link3</a></li>
+                <hr>
+            </ul>
+        </nav>
+        <main>
+            <article class="article1">
+                <header>article-header</header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero repudiandae provident cupiditate iste laudantium, amet quo consequatur laborum praesentium rem odit? Nihil labore optio soluta deserunt, et ipsum accusantium voluptate.</p>
+                <footer>article-footer</footer>
+            </article>
+            <article class="article2">
+                <header>article-header</header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero repudiandae provident cupiditate iste laudantium, amet quo consequatur laborum praesentium rem odit? Nihil labore optio soluta deserunt, et ipsum accusantium voluptate.</p>
+                <footer>article-footer</footer>
+            </article>
+        </main>
+        <aside>
+            <div>aside</div>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae quisquam perferendis pariatur tempora quam quidem doloremque quibusdam debitis rerum, exercitationem blanditiis natus, optio harum fugit repudiandae. Alias aspernatur illo magnam.
+            </p>
+        </aside>
+    </section>
+    <footer>footer</footer>
+</body>
+</html>

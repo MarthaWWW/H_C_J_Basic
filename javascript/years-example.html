@@ -1,0 +1,31 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-14 10:51:21
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-14 10:53:51
+ * @FilePath: \code\front-end\javascript\years-example.html
+ * @Description: 年份判断
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var year=2022
+        if(year%4===0&&year%100!==0){
+            console.log("是普通闰年")
+        }
+        else if(year%400===0){
+            console.log("是世纪闰年")
+        }
+        else{
+            console.log("是平年")
+        }
+    </script>
+</body>
+</html>

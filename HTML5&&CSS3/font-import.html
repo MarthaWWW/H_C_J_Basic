@@ -1,0 +1,33 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-09 13:20:50
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-09 13:40:12
+ * @FilePath: \code\front-end\font-import.html
+ * @Description: 字体引入
+    把自定义的Web字体嵌入到你的网页中。随着@font-face的出现，我们在Web的开发中可以使用除
+    Web安全字体以外的字体
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: Martha;
+            src: url(font/黄油拾叁体_mianfeiziti.com.ttf);
+        }
+        div{
+            font-family: Martha;
+            font-size: 30px;
+            text-shadow: 5px 0px 0px #cccccc;
+        }
+    </style>
+</head>
+<body>
+    <div>赵钱孙李</div>
+</body>
+</html>

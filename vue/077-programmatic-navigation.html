@@ -1,0 +1,20 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-05-02 16:47:02
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-05-02 16:47:03
+ * @FilePath: \code\front-end\vue\077-programmatic-navigation.html
+ * @Description: 编程式导航
+    声明式导航也可以写成变量
+    :to=变量值
+    经典功能，列表跳详情
+    长列表中跳转，绑定click事件
+    methods:{
+        handleChangePage(){
+            //location.href = '#/detail'
+            this.$router.push('/detail')
+            // 这种方式可以自动判别路径的模式，可以支持不带井号的模式
+        }
+    }
+    显示不同的界面需要传递参数
+-->

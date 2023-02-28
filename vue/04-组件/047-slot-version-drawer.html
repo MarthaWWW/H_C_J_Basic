@@ -1,0 +1,63 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-30 21:20:03
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-05-02 11:45:57
+ * @FilePath: \code\front-end\vue\047-slot-version-drawer.html
+ * @Description: 用slot写抽屉
+    slot可以扩展组件的能力，在父组件作用域中编译，可以简单的实现子父通信
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <!-- 根组件的dom结构 -->
+    <div id="box">
+        <!-- slot的部分实际上在box上，是sidebar的父级，可以访问sidebar的状态 -->
+        <navbar>
+            <button slot="click" @click="isShow=!isShow">点击</button>
+        </navbar>
+        <sidebar v-show="isShow"></sidebar>
+    </div>
+    
+    <script>
+        Vue.component("navbar",{
+            template:`
+            <div style="background-color:red;">
+            <slot name="click"></slot>-导航栏
+                </div>`
+        })
+
+        Vue.component("sidebar",{
+            template:`
+        <ul>
+            <li>001</li>
+            <li>002</li>
+            <li>003</li>
+            <li>004</li>
+            <li>005</li>
+            <li>006</li>
+            <li>007</li>
+            <li>008</li>
+            <li>009</li>
+            <li>010</li>
+        </ul>
+            `
+        })
+        new Vue({
+            el:"#box",
+            data:{
+                isShow:true
+            }
+        })
+    </script>
+</body>
+</html>
+

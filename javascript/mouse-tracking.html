@@ -1,0 +1,42 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-26 20:20:03
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-26 20:32:05
+ * @FilePath: \code\front-end\javascript\mouse-tracking.html
+ * @Description: 鼠标跟随
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width:30px;
+            height:30px;
+            position:fixed;
+            left:0;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+    <img src="../img/cute-monsters-icon.png" alt="">
+    <script>
+        var imgBox = document.querySelector('img')
+        //给document绑定一个鼠标移动事件
+        document.onmousemove = function(e)
+        {
+            //拿到光标相对于窗口的坐标点位
+            var x = e.clientX
+            var y = e.clientY
+            //把x,y赋值给Img的left,top属性
+            imgBox.style.left=x+5+'px'
+            imgBox.style.top=y+5+'px'
+        }
+    </script>
+</body>
+</html>

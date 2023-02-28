@@ -1,0 +1,78 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-29 14:11:43
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-29 14:53:27
+ * @FilePath: \code\front-end\vue\009-vue2-class&style.html
+ * @Description: vue2 class&style
+    class的组合如何设置
+    对于vue2,数组的方法更优
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+    <style>
+    .aa{
+
+    }
+
+    .bb{
+
+    }
+
+    .cc{
+
+    }
+
+    .dd{
+
+    }
+    </style>
+
+</head>
+<body>
+    <div id="box">
+        <div :class="classobj">动态切换class-1-对象</div>
+        <div :class="classarr">动态切换class-2-数组</div>
+        <div :style="styleobj">动态切换style-1-对象</div>
+        <div :style="stylearr">动态切换style-2-数组</div>
+    </div>
+    <script>
+        var vm = new Vue({
+            el:"#box",
+            data:{
+                classobj:{
+                    aa:true,
+                    bb:true,
+                    cc:false
+                    //这种写法会有aa,bb两个class
+                    //只有在初始化时才会被拦截，后续添加不会被拦截
+                },
+
+                classarr:["aa","bb"],
+
+                styleobj:{
+                    backgroundColor:'red'
+                },
+
+                stylearr:[{backgroundColor:'yellow'}]
+            },
+            //Vue2解决方案，Vue.set(对象.属性，true)
+            //Vue.set(vm.classobj,'dd',true)
+            //Vue.set(vm.styleobj,'fontSize',"30px")
+            //Vue2支持数组方案
+            //vm.classarr.push()
+            //vm.stylearr.push({fontSize:"30px"})
+            //Vue3支持动态增加属性的拦截
+            methods:{
+
+            }
+        })
+    </script>
+</body>
+</html>

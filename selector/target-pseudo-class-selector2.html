@@ -1,0 +1,48 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-06 19:36:01
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-06 19:39:17
+ * @FilePath: \code\.vscode\front-end\target-pseudo-class-selector2.html
+ * @Description: 目标伪类选择器--实现手风琴效果
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content{
+            display: none;
+        }
+
+        .content:target{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#a">a</a>
+        <div id="a" class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo reprehenderit alias in beatae, officiis natus, blanditiis sunt ducimus maiores veritatis quia, sint tempore. Voluptas porro culpa distinctio ea maxime deleniti.
+        </div>
+    </div>
+
+    <div>
+        <a href="#b">b</a>
+        <div id="b" class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo reprehenderit alias in beatae, officiis natus, blanditiis sunt ducimus maiores veritatis quia, sint tempore. Voluptas porro culpa distinctio ea maxime deleniti.
+        </div>
+    </div>
+
+    <div>
+        <a href="#c">c</a>
+        <div id="c" class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo reprehenderit alias in beatae, officiis natus, blanditiis sunt ducimus maiores veritatis quia, sint tempore. Voluptas porro culpa distinctio ea maxime deleniti.
+        </div>
+    </div>
+</body>
+</html>

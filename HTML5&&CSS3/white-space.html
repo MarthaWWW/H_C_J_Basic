@@ -1,0 +1,41 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-03-22 20:55:25
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-03-22 21:07:26
+ * @FilePath: \code\.vscode\hao\white-space.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by Martha, All Rights Reserved. 
+-->
+<!--如何显示三个。。。-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: yellow;
+            width:200px;
+            height:200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis/*省略意*/;
+            /*normal    默认值
+              nowrap    不换行，最常用
+              pre       预格式化，显示空格，回车，不换行
+              pre-wrap  显示空格，回车，换行
+              pre-line  显示回车，不显式空格，换行*/
+        }
+    </style>
+</head>
+<body>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam unde quis velit nobis alias minus itaque vel hic eligendi quas? Dolore impedit id asperiores laudantium voluptatem ullam ex expedita mollitia.</div>
+    <pre>
+        预格式化文本-保留空格，tab,回车，用于保留代码原格式
+    </pre>
+</body>
+</html>

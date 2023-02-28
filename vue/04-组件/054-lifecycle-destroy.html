@@ -1,0 +1,70 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-05-01 16:25:33
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-05-02 16:10:58
+ * @FilePath: \code\front-end\vue\054-lifecycle-destroy.html
+ * @Description: 生命周期-销毁
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        <child v-if="isCreated"></child>
+    </div>
+    <script>
+        Vue.component("child",{
+            data(){
+                return {
+                    time:1000
+                }
+            },
+
+            template:`
+            <div>抢购倒计时组件
+                <div>{{time}}</div>
+            </div>
+            `,
+            created(){
+                this.id=null
+            },
+            mounted(){
+                this.id=setInterval(()=>{
+                    this.time--
+                },1000)
+                //绑在window中
+                //故组件销毁还会运行
+            },
+
+            beforeDestroy(){
+                clearInterval(this.id)
+            },
+            //清除定时器
+            //事件解绑
+            //两个效果相同
+
+            destroyed(){
+
+            }
+
+        })
+        var vm = new Vue({
+            el:"#box",
+            data:{
+                isCreated:true
+            },
+
+            methods:{
+                
+            }
+        })
+    </script>
+</body>
+</html>

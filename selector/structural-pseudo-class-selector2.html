@@ -1,0 +1,52 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-06 19:22:55
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-06 19:28:15
+ * @FilePath: \code\.vscode\front-end\structural-pseudo-class-selector2.html
+ * @Description: 结构伪类选择器(2)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border:1px solid black;
+            width:100px;
+            height: 100px;;
+        }
+
+        div p:only-child{
+            background-color: aqua;
+        }
+        /* 只选择独生子 */
+
+        div:empty{
+            background: cadetblue;
+        }
+        /* 只选择空 */
+
+        :root,body{
+            height:100%;
+            background-color: darkgreen;
+        }
+        /* :root可以代替html */
+    </style>
+</head>
+<body>
+    <div>
+        <p>1</p>
+        <p>2</p>
+    </div>
+
+    <div>
+        <p>11</p>
+    </div>
+
+    <div></div>
+</body>
+</html>

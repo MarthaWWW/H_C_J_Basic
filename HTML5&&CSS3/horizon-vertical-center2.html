@@ -1,0 +1,42 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-04 16:52:22
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-04 16:59:06
+ * @FilePath: \code\.vscode\front-end\horizon-vertical-center2.html
+ * @Description: 水平垂直居中（父子情况）
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:500px;
+            height:500px;
+            background-color: aqua;
+            margin:0 auto;
+            position:relative;
+        }
+        /*如何让子盒子在父盒子中居中？*/
+        .child{
+            width:200px;
+            height:200px;
+            background-color:aquamarine;
+            position: absolute;
+            top:50%;/*这里百分比的参照物是父元素*/
+            left:50%;
+            margin-left: -100px;
+            margin-top: -100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="child"></div>
+    </div>
+</body>
+</html>

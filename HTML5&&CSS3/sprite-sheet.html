@@ -1,0 +1,49 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-04 17:16:48
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-04 19:45:30
+ * @FilePath: \code\.vscode\front-end\sprite-sheet.html
+ * @Description: 精灵图（图片整合技术）/雪碧图
+   将导航背景图片，按钮背景图片等有规则小型图标的合并成一张背景图，然后用background-position来实现背景图片的定位技术
+   通过图片整合来减少对服务器的请求次数，从而提高页面的加载速度
+   通过整合图片来减小图片的体积
+   雪碧图的关键是量出对左上角的位置
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:103px;
+            height:32px;
+            float:left;
+            margin:10px;
+            background-color: aqua;
+            background: url(img/background.png);
+        }
+        /*通过浏览器检查工具可以对像素值调整进行预览*/
+        .box1{
+            background-position: -205px -111px;
+        }
+
+        .box2{
+            background-position: -205px -74px;
+        }
+
+        .box3{
+            background-position: -205px -37px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

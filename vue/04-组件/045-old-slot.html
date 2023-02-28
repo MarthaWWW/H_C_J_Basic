@@ -1,0 +1,54 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-30 21:18:56
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-05-02 11:27:19
+ * @FilePath: \code\front-end\vue\045-old-slot.html
+ * @Description: 旧版slot(插槽)
+    可将dom元素嵌入组件，提高组件的复用性
+    使用插槽提高组件的灵活性，随意组合设计
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        <child>
+            <div>这是一个无名插槽</div>
+            <div slot="a">这是a插槽</div>
+            <div slot="b">这是b插槽</div>
+
+        </child>
+    </div>
+    <script>
+        //单个插槽会嵌入所有元素(没有slot属性)
+        //具名插槽可以实现对号入座的功能
+        Vue.component("child",{
+            template:`
+            <div>
+                child
+                <slot></slot>
+                <slot></slot>
+                <slot name="a"></slot>
+                <slot name="b"></slot>
+            </div>`
+        })
+        new Vue({
+            el:"#box",
+            data:{
+
+            },
+
+            methods:{
+                
+            }
+        })
+    </script>
+</body>
+</html>

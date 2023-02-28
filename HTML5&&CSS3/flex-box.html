@@ -1,0 +1,71 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-09 14:10:05
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-09 14:40:07
+ * @FilePath: \code\front-end\flex-box.html
+ * @Description: 弹性盒
+    一种新的布局方式，特别适合移动端布局
+    1.让子元素默认横向排列
+    2.能将行内子元素变为块级元素
+    3.只有一个子元素的时候，margin:auto自动居中
+    4.默认情况下主轴横向排列，侧轴垂直方向排列
+      row:水平排列/row-reverse
+      column:竖直排列/column-reverse
+    5.主轴侧轴对齐方式
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:500px;
+            height:500px;
+            border:2px solid black;
+            margin: 100px auto;
+            display: flex;
+            flex-direction: row; 
+            justify-content: flex-start;
+            /* 调整主轴对齐方式 */
+            /* 
+               flex-start      左端对齐
+               flex-end        右端对齐
+               center          居中
+               space-between   两端对齐方式
+               space-around    距离环绕  
+            */
+            align-items:flex-start; 
+            /* 调整侧轴对齐方式
+            不支持
+            space-between   两端对齐方式
+            space-around    距离环绕   */
+            flex-wrap: wrap;
+            /* 等间距折行排列 */
+            align-content: flex-start;
+            /* 控制折行后的行间距 */
+        }
+
+        .box span{
+            width:100px;
+            height:100px;
+            border:2px dashed black;
+            /* margin:auto; */
+        } 
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span>1</span>
+        <span>2</span> 
+        <span>3</span> 
+        <span>4</span> 
+        <span>5</span> 
+        <span>6</span>
+        <!-- 内容过多时不会换行，只会挤压子元素  -->
+    </div>
+</body>
+</html>

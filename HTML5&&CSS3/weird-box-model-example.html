@@ -1,0 +1,41 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-09 13:51:45
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-09 13:54:11
+ * @FilePath: \code\front-end\weird-box-model-example.html
+ * @Description: 怪异盒模型的使用场景
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 900px;
+            height:300px;
+            background: yellow;
+            margin: 0 auto;
+        }
+
+        .box div{
+            width:300px;
+            height:300px;
+            float: left;
+            box-sizing: border-box;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque amet earum veritatis delectus dignissimos aliquam, animi magnam culpa sapiente odit laborum veniam facilis quos, reiciendis ipsam minima officiis adipisci ratione.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo rerum at quaerat eius deleniti doloremque beatae quo ducimus dignissimos reiciendis unde, adipisci minima ad, ratione culpa alias magni magnam nesciunt?</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos veritatis possimus amet porro dignissimos dolorem labore velit atque recusandae fugiat voluptatibus delectus rerum, praesentium incidunt rem similique culpa, deserunt eveniet.
+        </div>
+    </div>
+</body>
+</html>

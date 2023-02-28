@@ -1,0 +1,62 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-29 19:53:16
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-29 21:44:27
+ * @FilePath: \code\front-end\vue\020-form-control-binding.html
+ * @Description: 表单控件绑定
+    mvvm:双向数据绑定
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        <div>
+            用户名: <input type="text" v-model="mytext"><br>
+            <input type="checkbox"  v-model="isRemember">记住用户名
+            <button @click="handleLogin">登录</button>
+        </div>
+        <div>
+            <h2>注册页面-兴趣爱好</h2>
+            <input type="checkbox" v-model="checklist" value="vue">vue
+            <input type="checkbox" v-model="checklist" value="react">react
+            <input type="checkbox" v-model="checklist" value="weixin">小程序<br>
+            {{checklist}}
+        </div>
+        <!-- 为多选框添加value属性,方便将checklist的数据返回后端 -->
+        
+        <div>
+            <h2>性别选择</h2>
+            <input type="radio" v-model="select" value="male">男
+            <input type="radio" v-model="select" value="female">女<br>
+            {{select}}
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el:"#box",
+            data:{
+                mytext:localStorage.getItem("username"),
+                isRemember:false,
+                checklist:[],
+                select:"male"
+            },
+
+            methods:{
+                handleLogin(){
+                    if(this.isRemember)
+                    localStorage.setItem("username",this.mytext)
+                console.log(this.checklist,this.select)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

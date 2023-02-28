@@ -1,0 +1,61 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-26 19:49:58
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-26 20:04:38
+ * @FilePath: \code\front-end\javascript\dynamic-rending-data.html
+ * @Description: 动态渲染数据
+   循环遍历users数组，有多少个成员执行多少回
+   1.创建一个tr标签
+   2.循环遍历users内的每一个对象，把td插入tr
+   3.把tr插入tbody内部
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width:300px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>姓名</th>
+                <th>性别</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- JS渲染 -->
+        </tbody>
+    </table>
+    <script>
+        var users =[
+            {id:1,name:'zhangsan',age:18},
+            {id:2,name:'lisi',age:19},
+            {id:3,name:'wangwu',age:25}
+        ]
+        var tbody = document.querySelector('tbody')
+        users.forEach(function(item){
+            //item是数组中的每一个对象
+            var tr= document.createElement('tr')
+            for(var key in item)
+            {
+                //在内部循环生成td标签
+                var td = document.createElement('td')
+                td.innerHTML = item[key]
+                tr.appendChild(td)
+            }
+            tbody.appendChild(tr)
+        })
+    </script>
+</body>
+</html>

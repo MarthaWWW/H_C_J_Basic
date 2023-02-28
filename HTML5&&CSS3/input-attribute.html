@@ -1,0 +1,32 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-05 21:15:54
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-05 21:24:33
+ * @FilePath: \code\.vscode\front-end\input-attribute.html
+ * @Description: 增强列表--属性
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            用户名<input type="text" autofocus required pattern="[0-9][A-Z]{3}">
+        </div>
+        <!-- autofocus 获取焦点 -->
+        <div>
+            邮箱：<input type="email" required multiple>
+        </div>
+        <!-- required 必填项，不能为空-->
+        <!-- multiple 支持多个值，用逗号隔开 -->
+        <input type="submit">
+        <!-- pattern  将属性值设为某个格式的正则表达式，在提交时会检查内容是否符合给定格式 -->
+    </form>
+</body>
+</html>

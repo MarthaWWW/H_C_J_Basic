@@ -1,0 +1,46 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-27 19:44:06
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-27 19:51:07
+ * @FilePath: \code\front-end\javascript\ES6\ES6-spread-operator.html
+ * @Description: ES6展开运算符
+      + ...
+      + 作用：展开数组的[]或者展开对象的{}
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[100,200,300,400]
+        console.log(arr)
+        console.log(...arr)
+        //作用1：合并数组
+        var arr1=[10,20]
+        var arr2=[30,40]
+        var arr3=[50,60,70]
+        var arr4=[80,90]
+        var arr5=[...arr1,...arr2,...arr3,...arr4]
+
+        //作用2：给函数传递参数
+        var max = Math.max(...arr5)
+        console.log(max)
+
+        //展开对象
+        //常见作用：赋值对象
+        var obj ={name:'Jack',age:18}
+        console.log(obj)
+
+        var obj2={
+            gender:'male',
+            ...obj
+        }
+    </script>
+</body>
+</html>

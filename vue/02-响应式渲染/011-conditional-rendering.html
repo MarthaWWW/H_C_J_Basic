@@ -1,0 +1,73 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-29 14:13:00
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-29 16:49:04
+ * @FilePath: \code\front-end\vue\011-conditional-rendering.html
+ * @Description: 条件渲染
+    以商店菜单为例
+    template--包装节点，不会破坏dom结构
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        <!-- <div v-if="isCreated">11111</div>
+        <div v-else>22222</div> -->
+        <!-- v-if and v-else -->
+        <h2>所有订单</h2>
+        <ul>
+            <li v-for="item in datalist" :key="item.id">
+                <!-- {{item.title}}---{{stateslist[item.state]}} -->
+                {{item.title}}--
+                <span v-if="item.state===0">未付款</span>
+                <span v-else-if="item.state===0">已发货</span>
+                <span v-else>已完成</span>
+            </li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el:"#box",
+            data:{
+                isCreated:true,
+                datalist:[
+                    {
+                        id:0,
+                        title:"1",
+                        state:0//用状态码代替字符串
+                    },
+
+                    {
+                        id:1,
+                        title:"2",
+                        state:1
+                    },
+
+                    {
+                        id:2,
+                        title:"3",
+                        state:2
+                    },
+                ],
+                stateslist:[
+                    "未付款",
+                    "已发货",
+                    "已完成"
+                ]
+            },
+
+            methods:{
+                
+            }
+        })
+    </script>
+</body>
+</html>

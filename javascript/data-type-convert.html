@@ -1,0 +1,59 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-14 10:00:47
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-14 10:13:10
+ * @FilePath: \code\front-end\javascript\data-type-convert.html
+ * @Description: 数据类型转换
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //转数值
+        var s1='100'
+        console.log(s1)
+        console.log(typeof s1)
+        var n1=Number(s1)
+        console.log(n1)
+        console.log(typeof n1)
+        //非数值字符串使用类型转换，类型值为NaN
+        var s2='abc'
+        console.log(s2)
+        console.log(typeof s2)
+        var n2=Number(s2)
+        console.log(n2)
+        console.log(typeof n2)
+        //parseInt()法,会对字符串逐位查看
+        var n11=parseInt(s1)
+        console.log(n11)
+        console.log(typeof n1)
+        var n22=parseInt(s2)
+        console.log(n22)
+        console.log(typeof n22)
+        //parseFloat()解析到小数部分
+
+        //转字符串方法
+        //String()方法
+        //toString()方法
+        var b1=true
+        var s111=b1.toString()
+        console.log(s111)
+        console.log(typeof s111)
+        
+        //转布尔
+        //Boolean()
+        var x='abc'
+        var b=Boolean(x)
+        console.log(b)
+        console.log(typeof b)
+        //五种转换成false的情况：0 NaN '' undefined null
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-29 19:55:21
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-30 16:42:05
+ * @FilePath: \code\front-end\vue\025-computed-attribute.html
+ * @Description: 计算属性
+    计算属性:计算得到的一个结果，更适合于之前函数表达式{{sum()}}的场合
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        {{ myname.substring(0,1).toUpperCase()+myname.substring(1)}}
+        {{ myComputedName }}
+        <!-- 实现功能，显示在页面中且首字母大写 -->
+    </div>
+    <script>
+        //计算属性（防止模板过重，难以维护），负责逻辑放在计算属性中来写
+
+        var vm = new Vue({
+            el:"#box",
+            data:{
+                myname:"martha"
+            },
+            //一般存放handle函数
+            methods:{
+                
+            },
+            //存放计算的属性
+            //一般是复杂计算逻辑
+            //在多次使用计算结果的场合非常合适
+            //此时如果使用method会多次调用，computed只会调用一次，会临时缓存计算结果
+            computed:{
+                myComputedName(){
+                    return this.myname.substring(0,1).toUpperCase()+this.myname.substring(1)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-09 14:41:45
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-09 15:05:43
+ * @FilePath: \code\front-end\flex-box-JD-example.html
+ * @Description: 弹性盒京东案例
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:300px;
+            height:120px;
+            border:1px solid black;
+            margin:10px auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            
+        }
+
+        .box div{
+            width:60px;
+            height:60px;
+            border: 1px dashed red;
+            box-sizing: border-box;
+            display: flex;
+            /* 将小div也设置为弹性盒 */
+        }
+
+        .box div img{
+            width:40px;
+            height:40px;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>
+            <img src="img/1_jd.png" alt="">
+        </div>
+        <div>
+            <img src="img/2_jd.png" alt="">
+        </div>
+        <div>
+            <img src="img/3_jd.png" alt="">
+        </div>
+        <div>
+            <img src="img/4_jd.png" alt="">
+        </div>
+        <div>
+            <img src="img/5_jd.png" alt="">
+        </div>
+        <div>
+            <img src="img/6_jd.png" alt="">
+        </div>
+        <div>
+            <img src="img/7_jd.png" alt="">
+        </div>
+        <div>
+            <img src="img/8_jd.png" alt="">
+        </div>
+        <div>
+            <img src="img/9_jd.png" alt="">
+        </div>
+        <div>
+            <img src="img/10_jd.png" alt="">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-04 21:32:33
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-04 21:38:48
+ * @FilePath: \code\.vscode\front-end\window-self-adaptive.html
+ * @Description: 窗口自适应
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+
+        .box{
+            width:100%;
+            height:100%;
+            background-color: aqua;
+        }
+
+        .child1{
+            background-color: brown;
+            height:50%;/*各占窗口的50%*/
+        }
+
+        .child2{
+            background-color: cornflowerblue;
+            height:50%;
+        }
+        html,body{
+            height:100%;/*添加这一句后，窗口实现高度自适应*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="child1"></div>
+        <div class="child2"></div>
+    </div>
+</body>
+</html>

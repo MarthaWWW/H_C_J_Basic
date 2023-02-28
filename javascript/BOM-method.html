@@ -1,0 +1,83 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-25 20:29:04
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-25 21:17:35
+ * @FilePath: \code\front-end\javascript\BOM-method.html
+ * @Description: BOM操作
+    Browser Object Model
+    一整套操作浏览器相关内容的属性和方法
+    操作浏览器历史记录
+    操作浏览器滚动条
+    操作浏览器页面跳转
+    操作浏览器标签页的开启和关闭
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="on">开启</button>
+    <button id="off">关闭</button>
+    <img src="../img/1.jpg" alt="">
+    <script>
+        //1.获取浏览器尺寸
+        var width=window.innerWidth
+        var height=window.innerHeight
+        console.log(width,height)
+
+        //2.浏览器的弹出层
+        //提示框：window.alert('提示信息')
+        //询问框：window.confirm('提示信息')
+        //输入框：window.prompt('提示信息')
+        //window.alert('提示信息')
+
+        //var res=window.confirm('你爱我吗？')
+        //console.log(res)
+        //有确定和取消两个按钮(true/false)
+
+        //var res=window.prompt('提示信息')
+        //console.log(res)
+
+        //3.开启和关闭标签页
+        //开启：window.open('地址')
+        //关闭：window.close()
+
+        //在JS中，页面元素的id可以直接当作变量来使用
+        
+        on.onclick = function(){
+            window.open('http://www.bilibili.com')
+        }
+
+        off.onlick=function(){
+            window.close()
+        }
+        //怪怪，点击关闭标签也没被关闭
+        //window.close()方法只能关闭由window.open()或者浏览器直接输入url打开的页面
+        //其余情况安全考虑是被限制的
+
+        //4.浏览器常见事件
+        //资源加载完毕：window.onload
+        //可视尺寸改变：window.onresize
+        //滚动条位置改变：window.onscroll
+        window.onload=function(){
+            console.log('资源已加载完毕')
+        }
+        //剩余两者同理
+
+        //5.浏览器的历史纪录操作
+        //回退页面：window.history.back()
+        //前进页面：window.history.forward()
+        //相当于左箭头和右箭头
+
+        //7.浏览器滚动到,定位到指定位置
+        //window.scrollTo(left,top)
+        //window.scrollTo({left:xx,top:yy，behavior:smooth})
+        //此方法可以达成滚动到的动态效果
+    </script>
+</body>
+</html>

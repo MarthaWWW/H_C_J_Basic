@@ -1,0 +1,65 @@
+{
+    "status": 0,
+    "data": {
+        "film": {
+            "filmId": 5936,
+            "name": "我是真的讨厌异地恋",
+            "poster": "https://pic.maizuo.com/usr/movie/9a735510f0cf44a483f0d7ac07271924.jpg",
+            "actors": [
+                {
+                    "name": "吴洋",
+                    "role": "导演",
+                    "avatarAddress": "https://pic.maizuo.com/usr/movie/82cbd1330d86c9976b8b15f50bf187d4.jpg@1246w_1246h_1l_0e"
+                },
+                {
+                    "name": "周男燊",
+                    "role": "导演",
+                    "avatarAddress": "https://pic.maizuo.com/usr/movie/74a24ea07e374455e71dcbcbdcfe32c0.jpg@1246w_1246h_1l_0e"
+                },
+                {
+                    "name": "任敏",
+                    "role": "赵一一",
+                    "avatarAddress": "https://pic.maizuo.com/usr/movie/726e29fece19cb0084c244fab87d2ade.jpg@1246w_1246h_1l_0e"
+                },
+                {
+                    "name": "辛云来",
+                    "role": "许嘉树",
+                    "avatarAddress": "https://pic.maizuo.com/usr/movie/d131e61678ef5a283ffab7f471876337.jpg@1246w_1246h_1l_0e"
+                },
+                {
+                    "name": "李孝谦",
+                    "role": "李唐",
+                    "avatarAddress": "https://pic.maizuo.com/usr/movie/1851abbf262ae8b582812961a0e16435.jpg@1246w_1246h_1l_0e"
+                }
+            ],
+            "director": "吴洋|周男燊",
+            "category": "爱情|青春|喜剧",
+            "synopsis": "要相信：熬过异地，就是一生。故事围绕赵一一（任敏 饰）和许嘉树（辛云来 饰）展开，高考之后，赵一一终于向暗恋多年的许嘉树表白，却阴差阳错开启一场异地恋。他们坚信：熬过异地，就是一生。可远距离恋爱的天然阻碍考验着他们，明明相爱，却不断缺席对方的生活。赛赫（陈宥维 饰）的出现以及闺蜜乔乔（周雨彤 饰）和李唐（李孝谦 饰）一波三折的爱情都让赵一一感触良多。当异地恋升级为异国恋，是继续坚持，还是一别两宽，各自成长的二人不得不面对自己内心的答案…",
+            "filmType": {
+                "name": "2D",
+                "value": 1
+            },
+            "nation": "中国大陆",
+            "language": "",
+            "videoId": "",
+            "premiereAt": 1651190400,
+            "timeType": 3,
+            "runtime": 100,
+            "photos": [
+                "https://pic.maizuo.com/usr/2022/23b9a6e8bd034fdb5cd581127cd59bf3.jpg",
+                "https://pic.maizuo.com/usr/2022/33a323a258bd47cd4defe0ec1c15d071.jpg",
+                "https://pic.maizuo.com/usr/2022/58d724310851b6abc1ab1778a835fed0.jpg",
+                "https://pic.maizuo.com/usr/2022/78a180475f7bb3c8eb76a5d8ea20737c.jpg",
+                "https://pic.maizuo.com/usr/2022/95fbad9e3c9fbc12e5ee308180d75835.jpg"
+            ],
+            "grade": "7.4",
+            "item": {
+                "name": "2D",
+                "type": 1
+            },
+            "isPresale": false,
+            "isSale": true
+        }
+    },
+    "msg": "ok"
+}

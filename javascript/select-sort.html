@@ -1,0 +1,37 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-25 16:30:21
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-25 16:39:49
+ * @FilePath: \code\front-end\javascript\select-sort.html
+ * @Description: 选择排序
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[9,3,6,2,4,1,8,5,7]
+        var min_index=0
+        var temp=0
+        for(var i=0;i<arr.length-1;i++)
+        {
+            min_index=i
+            for(var j=i+1;j<arr.length;j++)
+            {
+                if(arr[j]<arr[min_index])
+                    min_pos=j
+            }
+            temp=arr[i]
+            arr[i]=arr[min_index]
+            arr[min_index]=temp
+        }
+        console.log(arr)
+    </script>
+</body>
+</html>

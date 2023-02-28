@@ -1,0 +1,68 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-27 16:41:15
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-27 16:53:16
+ * @FilePath: \code\front-end\javascript\ES6\ES6-syntax.html
+ * @Description: ES6语法
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*let/const 与 var的区别
+          var会进行预解析
+          var可以声明两个重名的变量
+          var没有块级作用域
+        */
+        //1.预解析
+        console.log(num)//打印出undefined,说明打印之前num已经定义好，只是没有赋值
+        var num = 100
+        console.log(num)
+
+        console.log(num2)//会报错，不能在初始化之前使用变量
+        let num2 = 100
+        console.log(num2)
+
+        console.log(num3)//会报错，不能在初始化之前使用变量
+        const num3 = 100
+        console.log(num3)
+
+        //2.重复变量名
+        var n1=100
+        var n1=200
+        console.log(n1)//第二次的赋值有意义，第二次的声明没有意义
+    
+        let n2=100
+        let n2=200//只能声明一次，会报错
+
+        const n3=100
+        const n3=200//只能声明一次，会报错
+
+        //3.块级作用域
+        //任何一个可以执行代码段的{}都会限制该变量的使用范围
+        if(true)
+        {
+            var num4=100
+            console.log(num4)
+        }
+        console.log(num4)
+        //其余两种方式会无法打印外部log
+
+        /* let/const的区别
+            let可以在定义变量的时候不赋值
+            const在定义的时候必须赋值
+
+            let定义的变量可以修改
+            const定义的常量一经赋值不能修改
+        */
+    
+    </script>
+</body>
+</html>

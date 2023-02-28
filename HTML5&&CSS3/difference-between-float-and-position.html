@@ -1,0 +1,37 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-04 16:59:48
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-04 17:04:35
+ * @FilePath: \code\.vscode\front-end\difference-between-float-and-position.html
+ * @Description: 浮动与定位区别，两者都是脱离文档流
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width:200px;
+            height:200px;
+            background-color: rebeccapurple;
+            /* float:left; */
+            position:absolute;
+            /*float:实现文字环绕效果，是半脱离文档流状态*/
+            /*position:会遮盖住后方文字，是全脱离状态*/
+        }
+        .box2{
+            width:300px;
+            height:300px;
+            background-color: darksalmon;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi sint quisquam cupiditate repudiandae ducimus adipisci! Architecto rem facere recusandae sed vel quae, atque repellendus nobis cupiditate eius nesciunt modi molestiae.</div>
+</body>
+</html>

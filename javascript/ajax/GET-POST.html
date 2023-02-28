@@ -1,0 +1,51 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-27 20:23:35
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-27 20:40:20
+ * @FilePath: \code\front-end\javascript\ajax\GET-POST.html
+ * @Description:GET/POST的区别 
+    GET:获取
+    参数是查询字符串
+    大小限制2KB
+    xhr.open('GET','xxx?key=value&key2=value2',true)
+
+    POST:提交
+    参数格式多样，但是需要特殊说明
+    理论上没有限制
+    xhr.send(key=value&key2=value2)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //GET
+        var xhr = new XMLHttpRequest()
+        xhr.open('GET','http://127.0.0.1:5500/test/third?name=jack&age=18',true)
+        xhr.onload = function(){
+            var res = JSON.parse(xhr.responseText)
+            console.log(res)
+        }
+        xhr.send()
+
+        //POST
+        var xhr = new XMLHttpRequest()
+        xhr.open('POST','http://127.0.0.1:5500/test/fourth',true)
+        xhr.onload = function(){
+            var res = JSON.parse(xhr.responseText)
+            console.log(res)
+        }
+        //注意：当你发送POST请求，并且需要携带参数的时候，需要在发送以前
+        //进行特殊说明
+        //语法：xhr.setRequestHeader('content-type',你传递参数的格式)
+        xhr.setRequestHeader('content-type','application/x-www-form-urlencoded')
+        xhr.send('name=jack&age=18')
+    </script>
+</body>
+</html>

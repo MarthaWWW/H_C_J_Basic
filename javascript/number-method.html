@@ -1,0 +1,61 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-25 19:38:34
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-25 19:55:38
+ * @FilePath: \code\front-end\javascript\number-method.html
+ * @Description: 数字常用方法
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Math.random()
+        //获取0-1之间的随机小数，包含0，但是不包含1
+        console.log(Math.random())
+
+        //Math.round(数字)
+        //对数字进行四舍五入取整
+        //返回值是取整后的整数
+        console.log(Math.round(10.5))
+
+        //Math.ceil(数字) 向上取整    
+        //Math.floor(数字) 向下取整
+        console.log(Math.ceil(10.5))
+        console.log(Math.floor(10.5))
+
+        //Math.pow(number1,number2) 幂运算
+        console.log(Math.pow(2,5))
+
+        //Math.sqrt(number)  二次方跟运算
+        console.log(Math.sqrt((4)))
+
+        //Math.abs(number)  取绝对值运算
+        console.log(Math.abs(-12))
+
+        //Math.max(number1,number2....)   取最大值运算
+        console.log(Math.max(-12,0,23))
+
+        //Math.min(number1,number2....)   取最小值运算
+        console.log(Math.min(-12,0,23))
+
+        //Math.PI 得到一个近似Π的值
+
+        //封装函数，获取一个范围内的随机整数(min-max)
+        function f(min,max)
+        {
+            var r1=Math.random()
+            var r2=r1*(max-min+1)  
+            console.log(Math.floor(r2)+min)  //向下取整
+        }
+        f(23,34)
+
+    </script>
+</body>
+</html>

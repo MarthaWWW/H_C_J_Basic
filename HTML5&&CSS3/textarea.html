@@ -1,0 +1,43 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-05 10:43:55
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-05 10:51:38
+ * @FilePath: \code\.vscode\front-end\textarea.html
+ * @Description: 多行文本输入框-文本域
+    可以自动生成竖直方向滚动条
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea{
+            width:300px;
+            height:300px;
+            resize:vertical;
+            /*重新设置大小的允许值
+              vertical
+              horizontal
+              both
+              none
+            */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!--
+            cols：列数
+            rows：行数
+            文本输入框一般用css设置
+            placeholder:提示文字，并不是实际存在
+            默认value：写在双标签内部
+        -->
+        <textarea placeholder="请输入你的意见">提前设置好的value</textarea>
+    </div>
+</body>
+</html>

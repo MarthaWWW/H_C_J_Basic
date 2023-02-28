@@ -1,0 +1,41 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-04 21:10:43
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-04 21:18:40
+ * @FilePath: \code\.vscode\front-end\omnipotent-clear-float-solution.html
+ * @Description: 万能清除浮动法--解决子元素浮动带来的父元素高度塌陷
+    伪元素  fake-element
+    解决案例：secondary-menu
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*伪元素：依托于父级元素的元素,经常是父元素的组成部分或附加部分*/
+        div::first-letter{
+            font-size: 30px;
+        }
+
+        div::first-line{
+            background-color: aqua;
+        }
+
+        div::before{
+            content:"aaaaaa";
+        }
+
+        div::after{
+            content:"bbbbbb"
+        }
+        /*before和after都无法被选中*/
+    </style>
+</head>
+<body>
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae officia accusamus sunt natus at rem nisi necessitatibus nihil nostrum! Voluptates, eveniet praesentium? Ratione optio eius tempore! Blanditiis enim obcaecati ratione.</div>
+</body>
+</html>

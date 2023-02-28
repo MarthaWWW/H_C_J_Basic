@@ -1,0 +1,45 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-30 15:56:21
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-05-01 16:35:03
+ * @FilePath: \code\front-end\vue\042-ref-components-communication.html
+ * @Description: ref组件通信
+    ref可以打破组件的隔离关系
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        <input type="text" ref="mytext">
+        <input type="password" ref="mypassword">
+        <button @click="handleAdd">add</button>
+       
+    </div>
+    <script>
+        new Vue({
+            el:"#box",
+            data:{
+
+            },
+
+            methods:{
+                handleAdd(){
+                    console.log(this.$refs.mytext,this.$refs.mypassword)//可以拿到组件对象
+                }
+            }
+        })
+        /*
+            ref绑定dom节点，拿到的就是dom对象
+            ref绑定组件，拿到的就是组件对象
+        */
+    </script>
+</body>
+</html>

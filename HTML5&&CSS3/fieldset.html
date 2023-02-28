@@ -1,0 +1,41 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-05 14:32:38
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-05 14:37:59
+ * @FilePath: \code\.vscode\front-end\fieldset.html
+ * @Description: fieldset   字段集
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            border:1px solid blue;
+            width:400px;
+            height:100px;
+        }
+
+        legend{
+            border: 1px solid rebeccapurple;
+            text-align: center;
+        }
+        /*fieldset和legend看作普通标签，配合css使用*/
+    </style>
+</head>
+<body>
+    <fieldset>
+        <!--清晰标识小的集合或分组-->
+        <legend>性别</legend>
+        <input type="radio" name="sex" id="man">
+            <label for="man">男</label>
+        <br>
+        <input type="radio" name="sex" id="woman">
+            <label for="woman">女</label>
+    </fieldset>
+</body>
+</html>

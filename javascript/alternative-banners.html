@@ -1,0 +1,84 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-26 21:01:29
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-26 21:17:51
+ * @FilePath: \code\front-end\javascript\alternative-banners.html
+ * @Description: 轮播图
+    几个重叠放置的图片，默认只有第一个图片显示
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        ol, ul, li{
+            list-style: none;
+        }
+        
+        img{
+            height:100%;
+            width:100%;
+            display: block;
+        }
+        .banner{
+            height:300px;
+            width: 1000px;
+            position: relative;
+            margin:50px 0;
+        }
+
+        .banner > ul{
+            width: 100%;
+            height:100%;
+            position: relative;
+        }
+
+        .banner > ul > li{
+            width:100%;
+            height:100%;
+            position:absolute;
+            left:0;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <ul class="imgBox">
+            <!-- ul>imgBox>li*4>img[src=../img/al_$.png] -->
+            <ul>
+                <imgbox>
+                    <li><img src="../img/al_1.png" alt=""></li>
+                    <li><img src="../img/al_2.png" alt=""></li>
+                    <li><img src="../img/al_3.png" alt=""></li>
+                    <li><img src="../img/al_4.png" alt=""></li>
+                </imgbox>
+            </ul>
+        </ul>
+        <!-- 焦点区域 -->
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+
+        <!-- 左右切换按钮 -->
+        <div class="left">&lt;</div>
+        <div class="right">&gt;</div>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+</html>

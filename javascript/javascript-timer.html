@@ -1,0 +1,47 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-25 21:18:30
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-25 21:35:07
+ * @FilePath: \code\front-end\javascript\javascript-timer.html
+ * @Description: 定时器
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="off">关闭定时器</button>
+    <script>
+        //间隔定时器
+        var time1=setInterval(function(){
+            console.log('间隔定时器')
+        },1000)
+        //每1000毫秒执行一次
+        //第1个
+
+        //延时定时器
+        var time2=setTimeout(function(){
+            console.log('延时定时器')
+        },5000)
+        //第2个
+
+        //定时器的返回值不区分种类，表示是当前页面的第几个定时器
+        //用于关闭定时器
+
+        //关闭定时器
+        //clearInterval(要关闭的定时器返回值)
+        //clearTimeout(要关闭的定时器返回值)
+        //并不区分种类
+        off.onlick=function()
+        {
+            clearInterval(time1)
+            clearInterval(time2)
+        }
+    </script>
+</body>
+</html>

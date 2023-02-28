@@ -1,0 +1,52 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-30 21:17:24
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-05-01 16:48:46
+ * @FilePath: \code\front-end\vue\043-component-note.html
+ * @Description: 组件注意
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <!-- v-once 存储静态内容，永远不会更新 -->
+    <div id="box">
+        {{title}}
+        <child :mytitle="title"></child>
+    </div>
+    <script>
+        Vue.component("child",{
+            props:["mytitle"],
+            template:`
+            <div>child-{{mytitle}}
+                <button @click="handleClick">click</button></div>
+            `,
+
+            methods:{
+                handleClick(){
+                    this.mytitle="这不是一个标题"
+                }
+                //这样会造成数据流紊乱，造成两端的不对称，实际是无意义的
+            }
+        })
+
+        new Vue({
+            el:"#box",
+            data:{
+                title:"这是一个标题"
+            },
+
+            methods:{
+                
+            }
+        })
+    </script>
+</body>
+</html>

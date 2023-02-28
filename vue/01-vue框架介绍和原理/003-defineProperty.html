@@ -1,0 +1,36 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-28 15:06:53
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-28 15:19:53
+ * @FilePath: \code\front-end\vue\defineProperty.html
+ * @Description: Vue拦截原理
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+    </div>
+    <script>
+        var obj = {}
+        var obox=document.getElementById("box")
+        Object.defineProperty(obj,"myname",{
+            get(){
+                console.log("get")
+                return obox.innerHTML
+            },
+            set(value){
+                console.log("set",value)
+                obox.innerHTML = value
+            }
+        })
+        //对一个对象的属性进行拦截
+    </script>
+</body>
+</html>

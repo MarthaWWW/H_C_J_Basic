@@ -1,0 +1,78 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-05-01 16:21:23
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-05-02 14:39:28
+ * @FilePath: \code\front-end\vue\048-transition-effect.html
+ * @Description: 过渡效果：辅助组件加入动画效果
+    不用自己操作class的添加和删除
+    transition标签内只能放一个元素
+    v-if/v-else  实现多个元素过渡
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+    <style>
+        /* 
+        关键帧：
+        0%开始
+        100%结束
+        1.5s时间 
+        */
+        .martha-enter-active{
+            animation: anima 1.5s;
+        }
+
+        .martha-leave-active{
+            animation: anima 1.5s reverse;
+        }
+        @keyframes anima {
+            0%{
+                opacity: 0;
+                transform:translateX(100px);
+            }
+
+            100%{
+                opacity: 1;
+                transform:translateX(0px);
+            }
+            /* 透明度从0到1，位移从100px到0 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 根组件的dom结构 -->
+    <!-- 出现和隐藏都要有动画 -->
+    <div id="box">
+        <button @click="isShow=!isShow">change</button>
+       
+        <!-- transition能控制的是dom本身的消失和出现 -->
+        <transition name="martha" appear>
+            <!-- appear属性使出现时就有动画 -->
+        <div v-show="isShow">显示内容</div>
+        </transition>
+
+        <transition name="martha">
+        <!-- 多个元素过渡需要加key属性，与虚拟dom的对比环节相关 -->
+        <div v-if="isShow" key="1">内容1</div>
+        <div v-else key="2">内容2</div>
+        </transition>
+    
+    </div>
+    
+    <script>
+        
+        new Vue({
+            el:"#box",
+            data:{
+                isShow:true
+            }
+        })
+    </script>
+</body>
+</html>

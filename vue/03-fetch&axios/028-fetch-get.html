@@ -1,0 +1,62 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-29 19:56:09
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-30 20:12:34
+ * @FilePath: \code\front-end\vue\028-fetch-get.html
+ * @Description: fetch-get
+    响应式渲染结束，开始操作真数据
+    XMLHttpRequest标准是一个设计粗糙的API,配置和调用方式非常混乱
+    而且基于事件的异步模型写起来不友好
+
+    新的fetch标准：基于promise封装的标准，不需要引用任何第三方文件
+    ajax:异步请求数据模型，是局部更新页面的一种技术
+    实现ajax的实现方法以前只有xhr,现在有了新的fetch
+
+    fetch有严重的兼容性问题
+    查询兼容问题：caniuse.com
+    fetch兼容库
+    polyfill:
+    https://github.com/camsong/fetch-ie8
+    原理是降级为XHR
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        <button @click="handleFetch">ajax-fetch</button>
+    </div>
+    <script>
+        new Vue({
+            el:"#box",
+            data:{
+
+            },
+
+            methods:{
+                handleFetch(){
+                    //promise写法，兑现执行.then,没有对线执行.catch
+                    fetch("../json/test.json")
+                    //console.log(res)
+                    //状态码，响应头，拿不到真正数据
+                    .then(res=>res.json())
+                    .then(res=>{
+                        console.log(res)
+                    })
+                    .catch(err=>{
+                        console.log(err)
+                    })
+                    
+                }
+            }
+        })
+    </script>
+</body>
+</html>

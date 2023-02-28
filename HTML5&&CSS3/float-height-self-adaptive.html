@@ -1,0 +1,62 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-04 20:19:31
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-04 21:09:30
+ * @FilePath: \code\.vscode\front-end\float-height-self-adaptive.html
+ * @Description: 浮动元素高度自适应
+   overflow:hidden    会隐藏溢出元素
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .left, .right{
+            width: 100px;
+            height:100px;
+            float:left;
+        }
+
+        .left{
+            background-color: blue;
+        }
+
+        .right{
+            background-color:gold;
+        }
+
+        .content{
+            background-color: forestgreen;
+            width:200px;
+            height:200px;
+        }
+        /*
+        .box{
+            height: 100px;    直接设置不适应后续子元素的添加 
+        }
+        */
+        /*浮动导致父元素高度塌陷*/
+
+        .box{
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="left"></div>
+        <div class="right">  
+        </div>
+        <!--
+        <div style="clear: both;"></div>
+        清除前面盒子产生的浮动
+        增加空标签，不利于代码可读性，降低了爬虫的效率
+    -->
+    </div>
+    <div class="content"></div>
+</body>
+</html>

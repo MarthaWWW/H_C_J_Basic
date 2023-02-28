@@ -1,0 +1,46 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-06 20:35:23
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-06 20:53:08
+ * @FilePath: \code\.vscode\front-end\border-radius.html
+ * @Description: 圆角边框
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            background-color: green;
+            margin:0 auto;
+            border-radius:10px 100px;
+            /* px或者百分比，指圆角所在⚪的半径 
+               v1 四个角一样
+               v1,v2 左上右下，左下右上对角线圆角一致
+               v1,v2,v3 左上，左下右上，右下
+               v1,v2,v3,v4 顺时针方向
+            */
+
+            /* border-top-left-radius */
+            /* 垂直方向在前，水平方向在后 */
+        }
+
+        .box{
+            border-radius: 30px/60px;
+            /*水平径向30px,垂直径向60px,作椭圆弧，只支持border-radius写法*/
+        }
+        /* border-radius:10px 20px 30px 40px/50px 60px 70px 80px; */
+        /* 百分比写法是指对于盒子宽高的占比 */
+   </style>
+</head>
+<body>
+    <div></div>
+    <div class="box"></div>
+</body>
+</html>

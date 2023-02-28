@@ -1,0 +1,139 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-29 19:53:47
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-30 16:47:27
+ * @FilePath: \code\front-end\vue\021-shopping-cart-ex.html
+ * @Description: 购物车案例
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.next.js"></script>
+    <style>
+        li{
+            display:flex;
+            justify-content: space-around;
+            padding:10px;
+            list-style: none;
+        }
+
+        li img{
+            width:100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div>
+            <input type="checkbox" v-model="isAll" @change="handleAllChecked">全选
+        </div>
+        <ul>
+            <!-- v-bind 单向绑定，一般作为参照
+            v-model 双向绑定，一般用于数据与页面交互的动态改变 -->
+            <li v-for="(item,index) in datalist" :key="item.id">
+                <input type="checkbox" v-model="checklist" :value="item" @change="handleItemChecked">
+                <!-- 注意此时的value是属性值,需要动态绑定,直接用item -->
+                <img :src="item.pic" alt="">
+                <div>
+                    <div>{{item.name}}</div> 
+                    <div style="color:red">${{item.price}}</div>
+                </div>
+                <div>
+                    <!-- @--v-on    :--v-bind -->
+                    <button @click="item.number--" :disabled="item.number===1">-</button>
+                    <span>{{item.number}}</span>
+                    <button @click="item.number++" :disabled="item.number===5">+</button>
+                </div>
+                <div>
+                    <button @click="handleDelete(index,item.id)">删除</button>
+                </div>
+            </li>
+            {{checklist}}
+        </ul>
+        <div>
+            总金额:{{sum}}
+        </div>
+    </div>
+    <script>
+        var obj={
+            data(){
+                return {
+                    isAll:false,
+                    checklist:[],
+                    datalist:[
+                        {
+                            name:"商品1",
+                            price:10,
+                            number:1,
+                            id:1,
+                            limits:5,
+                            pic:"../img/1.jpg"
+                    },
+                    {
+                            name:"商品2",
+                            price:30,
+                            number:1,
+                            id:2,
+                            limits:5,
+                            pic:"../img/1.jpg"
+                    },
+                    {
+                            name:"商品3",
+                            price:5,
+                            number:1,
+                            id:3,
+                            limits:5,
+                            pic:"../img/1.jpg"
+                    }
+                    ]
+                }
+            },
+            methods:{
+                //每一次数组元素产生改变就会触发这个函数
+                
+
+                handleDelete(index,id){
+                    this.checklist = this.checklist.filter(item=>item.id!==id)
+                    this.datalist.splice(index,1)
+                    this.handleItemChecked()
+                    //数组更新进行手动判断
+                },
+
+                handleItemChecked(){
+                    if(this.checklist.length===this.datalist.length)
+                        this.isAll= true
+                    else
+                        this.isAll = false
+                },
+
+                handleAllChecked(){
+                    if(this.isAll)
+                    this.checklist=this.datalist
+                    else
+                    this.checklist=[]
+                }
+            },
+
+            computed:{
+                sum(){
+                    var total=0
+                    //累加计算checklist数组的每一项的价格之和
+                    this.checklist.forEach(item=>{
+                        total+=item.price*item.number
+                    })
+
+                    return total
+                }
+            }
+        }
+
+        Vue.createApp(obj).mount("#box")
+    </script>
+</body>
+</html>
+

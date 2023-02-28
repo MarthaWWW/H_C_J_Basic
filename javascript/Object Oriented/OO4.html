@@ -1,0 +1,39 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-27 14:24:47
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-27 15:07:53
+ * @FilePath: \code\front-end\javascript\Object Oriented\OO4.html
+ * @Description: 面向对象-4：构造函数的不合理
+    当在构造函数体内书写方法的时候
+    只要创建一次对象，就会有一个函数在占用空间
+    函数不可重用
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(name,age){
+            this.name=name
+            this.age=age
+            this.sayHi=function(){console.log('hello world')}
+        }
+
+        var jack = new Person('Jack',18)
+        var rose = new Person('Rose',20)
+        console.log(jack,rose)
+
+        jack.sayHi()
+        rose.sayHi()
+
+        console.log(jack===rose)
+        console.log(jack.sayHi()===rose.sayHi())
+    </script>
+</body>
+</html>

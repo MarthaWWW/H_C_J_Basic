@@ -1,0 +1,48 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-29 19:54:03
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-30 15:46:29
+ * @FilePath: \code\front-end\vue\024-form-modifier.html
+ * @Description: 表单修饰符
+    加于v-model的修饰符
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        <input type="text" v-model.lazy="mytext">
+        <!-- .lazy修饰符，是双向绑定不是即时同步，而是在失去当前焦点时同步 -->
+        {{mytext}}
+        <input type="number" v-model.number="myage">
+        <!-- 表单无论设置是什么类型，最后都会变成字符串 -->
+        <!-- .number修饰符，可以转换类型，当输入字符串中有字母时，parseInt会将字母自动删去 -->
+        <input type="text" v-model.trim="myusername">
+        <!-- 解决手抖输入空格的问题 -->
+        <!-- 去首尾空格 -->
+        <!-- 字符串自带的trim()可以去除首尾空格 -->
+    </div>
+    <script>
+        var vm = new Vue({
+            el:"#box",
+            data:{
+                mytext:"",
+                myage:0,
+                myusername:""
+            },
+
+            methods:{
+                
+            }
+        })
+    </script>
+</body>
+</html>
+

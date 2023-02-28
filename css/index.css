@@ -1,0 +1,160 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+ul{
+    list-style: none;
+}
+.con{
+    width: 966px;
+    margin:0 auto;
+}/*版心格式*/
+
+.header{
+    height:110px;
+}
+
+.logo{
+    width:265px;
+    height:110px;
+    background: url(../img/logo.png);
+    float:left;
+}
+
+.headerright{
+    float:right;
+}
+
+.headerright ul{
+    height: 44px;
+    margin-top: 10px;
+    line-height: 44px;
+}
+
+.headerright li{
+    float:left;
+}
+
+.headerright li a{
+    border-right: 1px solid #b2c7ea;
+    padding: 0 13px;
+    font-size: 13px;
+    color:#ababab
+}
+
+.headerright .last{
+    padding-right: 0;
+    border-right: 0;
+}
+
+.headerright li .active{
+    color:#eb6ca1;
+}
+
+.headerright .search{
+    float:right;
+    height: 28px;
+    width: 234px;
+    border: 1px solid #ababab
+}
+
+.search input{
+    border:0;
+    outline: 0;
+}
+
+.search .left{
+    width:196px;
+    height:28px;
+    padding-left:14px;
+    float:left;
+}
+
+.search .right{
+    float: right;
+    height: 28px;
+    width: 24px;
+    background: url(../img/search.png) no-repeat left center;
+}
+
+.navi{
+    height:53px;
+    line-height: 53px;
+    border-top: 1px solid #657588;
+    background-color: #0c345c;
+    color:white;
+}
+
+.navi li{
+    float:left;
+    padding-right:76px;
+    font-size: 16px;
+}
+
+.banner{
+    height: 300px;
+    background: url(../img/banner.png) no-repeat center;
+}
+
+.list{
+    height: 213px;
+    margin-top: 51px;
+    margin-bottom: 35px;
+}
+
+.item{
+    height: 211px;
+    width: 305px;
+    border: 1px solid #cccccc;
+    float: left;
+    margin-right:19px;
+}
+
+.item p{
+    padding-left: 28px;
+    height:46px;
+    line-height: 46px ;
+    font-size: 16px;
+}
+
+img{
+    display: block;
+}
+
+.itemlast{
+    margin-right: 0;
+}
+
+.footer{
+    height:206px;
+    border: 1px solid #cccccc;
+    background-color: #d1d1d1;
+}
+
+.footer ul{
+    height:84px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    line-height: 28px;
+    border-bottom: 1px solid #ecebeb;
+}
+
+.footer li{
+    width:210px;
+    padding-left: 30px;
+    font-size: 12px;
+    color:#336699;
+    float:left;
+}
+
+.footer p{
+    height:61px;
+    padding-left: 30px;
+    font-size: 12px;
+    line-height:61px;
+}
+
+.footer p span{
+    color:dodgerblue;
+}

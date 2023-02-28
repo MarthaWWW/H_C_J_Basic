@@ -1,0 +1,52 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-29 19:52:05
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-29 21:02:13
+ * @FilePath: \code\front-end\vue\018-event-modifier.html
+ * @Description: 事件修饰符
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        <!-- .self修饰符阻止子代行为触发父节点 -->
+        <ul @click.self="handleUlClick">
+            <!-- @click.stop-----   .stop修饰符阻止冒泡 -->
+            <li @click.stop="handleLiClick">1</li>
+            <li @click="handleLiClick">2</li>
+            <li @click.once="handleLiClick">3</li>
+            <!-- .once仅能触发一次 -->
+            <li>4</li>
+        </ul>
+        <a href="http://www.baidu.com" @click.prevent>跳转</a>
+        <!-- .prevent 阻止默认行为的修饰符 -->
+    </div>
+    <script>
+        new Vue({
+            el:"#box",
+            data:{
+
+            },
+
+            methods:{
+                handleUlClick(){
+                    console.log("ul")
+                },
+                handleLiClick(){
+                    console.log("li")
+                },
+                //如何阻止冒泡
+                //dom:evt.stopPropagation()
+            }
+        })
+    </script>
+</body>
+</html>

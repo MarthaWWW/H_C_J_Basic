@@ -1,0 +1,31 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-05-02 16:44:38
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-05-02 16:44:38
+ * @FilePath: \code\front-end\vue\074-redirect.html
+ * @Description: 重定向
+    如何实现点击跳转
+    JS跳转方式（编程式导航）：location.href = "http://localhost:8080/#/cinemas"
+    也可以通过a链接跳转
+
+    路由原理：
+    (1)hash路由==>location.hash切换
+       window.onhashchange 监听路径的切换
+    (2)history路由==>history.pushState切换
+       window.onpopstate 监听路径的切换
+-->
+<!-- a链接方法：声明式导航 -->
+<div>
+    <ul>
+        <li>
+            <a href="/#/films"></a>
+        </li>
+        <li>
+            <a href="/#/cinemas"></a>
+        </li>
+        <li>
+            <a href="/#/center"></a>
+        </li>
+    </ul>
+</div>

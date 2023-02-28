@@ -1,0 +1,54 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-03-21 21:12:20
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-03-21 21:26:39
+ * @FilePath: \code\.vscode\hao\margin.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by Martha, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+        }
+        .box1{
+            background-color: red;
+            border:1px solid yellow;
+            margin:50px;
+        }
+        .box2{
+            background-color: green;
+            border:1px solid blue;
+            margin-top:-70px;
+        }
+        .box3{
+            background-color: black;
+            margin:0 auto/*左右居中，在上下auto居中没有意义*/
+        }
+        /*
+        1.margin-top
+        margin-bottom
+        margin-left
+        margin-right
+        2.背景色不会蔓延
+        3.*{margin:0}
+        4.外边距支持负值，实现覆盖效果
+        5.屏幕居中方案：margin:0 auto
+        */
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

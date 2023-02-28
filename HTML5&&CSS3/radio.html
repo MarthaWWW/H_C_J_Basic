@@ -1,0 +1,48 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-05 10:00:45
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-05 10:09:54
+ * @FilePath: \code\.vscode\front-end\single-box.html
+ * @Description: 表单进阶-单选框
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>表单进阶-单选框</h1>
+    <div>你对京东首页的满意度如何</div>
+    <div>
+        <input type="radio" name="aaa" checked>非常满意
+    </div>
+    <!--checked：默认选中属性-->
+    <div>
+        <input type="radio" name="aaa">满意
+    </div>
+    <div>
+        <input type="radio" name="aaa">一般
+    </div>
+    <div>
+        <input type="radio" name="aaa">不满意
+    </div>
+    <!--只有设置统一组名name才能实现单选功能-->
+
+    <div>
+        <div>你的性别</div>
+        <div>
+            <input type="radio" name="sex" id="man">
+            <label for="man">男</label>
+        </div>
+        <div>
+            <input type="radio" name="sex" id="woman">
+            <label for="woman">女</label>
+    <!--label标签可以实现点击文字实现单选-->
+        </div> 
+    </div>
+</body>
+</html>

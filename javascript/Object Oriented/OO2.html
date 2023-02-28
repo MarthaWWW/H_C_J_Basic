@@ -1,0 +1,77 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-27 14:23:24
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-27 14:51:34
+ * @FilePath: \code\front-end\javascript\Object Oriented\OO2.html
+ * @Description: 面向对象-2：创建对象的方式
+    1. 字面量方式创建对象
+       + var obj = { ... }
+       + 可以后期动态添加
+       + 需要不断重写
+    
+    2. 内置构造函数创建对象
+       + var obj = new Object()
+       + 可以后期动态添加
+    方法1，2都不容易批量创建
+
+    3. 工厂函数创建对象
+       3-1.制造一个工厂函数
+       3-2.使用工厂函数去创建对象
+
+    4. 自定义构造函数创建对象
+       4-1.制造一个自定义构造函数
+       4-2.使用自定义构造函数去创建对象
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.
+        var obj ={
+            name:'jack',
+            age:18,
+            sayHi: function(){console.log('hello world')}
+        }
+        //2.
+        var obj2 = new Object()
+        obj2.name='Jack'
+        obj2.age=18
+        obj2.sayHi = function(){console.log('hello world')}
+
+        //3.使用工厂函数创建对象
+        // function createObj(name,age){
+        //     var obj={}
+        //     obj.name=name
+        //     obj.age=age
+        //     obj.sayHi = function(){console.log('hello world')}
+        //     return obj
+        // }
+        // var obj3=createObj("Jack",18)
+        // var obj4=createObj("Rose",20)
+        //实现对象的批量生产
+
+        //4.自定义构造函数创建对象
+        function Obj(name,age){
+            //自动创建对象
+            //手动向对象里面添加成员
+            this.name=name
+            this.age=age
+            this.sayHi = function(){console.log('hello world')}
+            //自动返回对象
+
+        }
+        //使用自定义构造函数创建对象
+        //构造函数在使用的时候，需要和new关键字连用
+        //如果不连用，那么没有意义
+        var obj5=new Obj("Jack",18)
+        console.log(obj5)
+    </script>
+</body>
+</html>

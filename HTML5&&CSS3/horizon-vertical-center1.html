@@ -1,0 +1,39 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-04 16:41:04
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-04 16:51:29
+ * @FilePath: \code\.vscode\front-end\horizon-vertical-center.html
+ * @Description: 水平垂直居中
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+        div{
+            width:200px;
+            height:200px;
+            background-color: aqua;
+            /*margin:0 auto;实现水平居中*/
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin-left: -100px;
+            margin-top: -100px;
+            /*利用margin使其移动到屏幕中央*/
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

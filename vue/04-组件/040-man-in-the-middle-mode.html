@@ -1,0 +1,94 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-30 15:55:02
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-05-02 15:29:56
+ * @FilePath: \code\front-end\vue\040-man-in-the-middle-mode.html
+ * @Description: 中间人模式
+   一个子组件将信息传递给父组件，父组件再将信息传递给另一个子组件
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+    <script src="../lib/axios.min.js"></script>
+    <style>
+        img{
+            width:100px;
+            height:140px;
+
+        }
+
+        .film-detail{
+            border:1px solid black;
+            width:300px;
+            min-height:200px;
+            background:yellow;
+            position: fixed;
+            top:100px;
+            right:50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <film-item v-for="actor in actorlist" :actor="actor" @event="handleEvent"></film-item>
+        <film-detail :data="data"></film-detail>
+
+    </div>
+    
+    <script>
+        Vue.component("filmItem",{
+            props:["actor"],
+            template:`
+            <div style="border:1px solid black;width:500px;">
+            {{actor.name}}
+            {{actor.role}} <br>
+            <img :src="actor.avatarAddress" alt=""><br>
+            <button @click="handleClick">详情</button>
+            </div>
+            `,
+            methods:{
+                handleClick(){
+                    this.$emit("event",this.actor.avatarAddress)
+            }
+            }
+        })
+
+        Vue.component("filmDetail",{
+            props:['data']
+            ,
+            template:`
+            <div class="film-detail">
+                {{data}}
+            </div>`
+
+        })
+        new Vue({
+            el:"#box",
+            data:{
+                actorlist:[],
+                data:""
+            },
+
+            methods:{
+                handleEvent(data){
+                    console.log(data)
+                    this.data=data
+                }
+            },
+
+            mounted(){
+                axios.get("../json/maizuo.json") 
+                    .then(res=>{
+                        this.actorlist=res.data.data.film.actors//res.data等价于fetch中的第2个res
+                    }) 
+            }
+        })
+    </script>
+</body>
+</html>

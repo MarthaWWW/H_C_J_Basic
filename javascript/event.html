@@ -1,0 +1,47 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-26 20:05:07
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-26 20:19:02
+ * @FilePath: \code\front-end\javascript\event.html
+ * @Description: JS事件上
+    通过代码的方式和页面中的某些内容做好一个约定
+    用户出发指定行为的时候，就会执行代码
+    事件绑定：
+    1.事件源
+    2.事件类型
+    3.事件处理函数
+    事件源.on事件类型 = 事件处理函数
+
+    事件对象：
+        当事件触发的时候，一个描述该事件信息的对象的数据类型
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div')
+        div.onclick=function(e){
+            alert("救命啊！别碰我")
+            console.log(e)
+            //浏览器传递的实参就是事件对象
+        }
+    </script>
+    
+</body>
+</html>

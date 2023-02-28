@@ -1,0 +1,60 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-05 20:49:16
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-05 21:05:27
+ * @FilePath: \code\.vscode\front-end\enforce-input.html
+ * @Description: 增强表单
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 颜色选择 -->
+    <form action="">
+        <div>
+            颜色选择：<input type="color" name="color"> 
+        </div>
+
+        <div>
+            邮箱：<input type="email" name="email">
+        </div>
+
+        <div>
+            URL地址:<input type="url" name="url">
+        </div>
+
+        <div>
+            电话号码：<input type="tel" name="tel">
+        </div>
+
+        <div>
+            滑块效果：<input type="range" name="range" min="0" max="250" value="10" step="10">        
+        </div>
+        <!-- step步长 -->
+        <div>
+            数字类型：<input type="number" name="number" min="0" max="100" step="10" value="20">
+        </div>
+
+        <div>
+            搜索：<input type="search" name="search">
+        </div>
+
+        <div>
+            日期：<input type="date" name="date">
+            <!-- month -->
+            <!-- week -->
+            <!-- datetime -->
+            <input type="datetime-local" name="dl">
+        </div>
+        <!-- 有name值才能提交到后端 -->
+        <input type="submit">
+        <!-- 提交特定值到后端 -->
+    </form>
+</body>
+</html>

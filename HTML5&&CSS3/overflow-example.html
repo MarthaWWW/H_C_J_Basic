@@ -1,0 +1,166 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-03-22 20:20:56
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-03-22 20:54:49
+ * @FilePath: \code\.vscode\hao\overflow-example.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by Martha, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*border padding的大小都要减掉，不然会改变盒子的大小*/
+        *{
+            margin:0;
+            padding:0;
+        }
+        #box{
+            width:890px;
+            height:290px;
+            margin:0 auto;
+            overflow: auto;
+        }
+        .info{
+            width:162px;
+            height:112px;
+            border:1px solid #808080;
+            float:left;
+            margin-right:48px ;
+            margin-bottom:20px;
+        }
+        .info div{
+            height:84px;
+            width:162px;
+            background-color: #cccccc;
+            font-size:12px;
+        }
+        .info .price{
+            height:63px;
+            line-height: 63px;
+            padding-left:21px;
+            color:#b5b5b5;
+        }
+        .info .date{
+            color:#b5b5b5;
+            padding-left:21px;
+            
+        }
+        .info .category{
+            background-color: white;
+            height:28px;
+            line-height:28px;
+            color:black;
+            text-align:center;
+            font-size:12px;
+        }
+        .info:hover div{
+            background-color: #219cea;
+            /*color:white;这样修改会导致优先级不够的问题*/
+        }
+        /*源于a链接的伪类选择器*/
+        .info:hover .date{
+            color:white;
+        }
+        .info:hover .price{
+            color:white;
+        }
+        .info:hover .category
+        {
+            color:#219cea;
+            background-image: url(img/ovex.png);
+            background-repeat: no-repeat;
+            background-size: 15px 15px;
+            background-position: right bottom;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="info">
+            <div>
+                <p class="price">￥100.00元</p>
+                <P class="date" >有效期至：2021-5-1</P>
+            </div>
+            <p class="category">[店铺类][商城类]</p>
+        </div>
+        <div class="info">
+            <div>
+                <p class="price">￥100.00元</p>
+                <P class="date" >有效期至：2021-5-1</P>
+            </div>
+            <p class="category">[店铺类][商城类]</p>
+        </div>
+        <div class="info">
+            <div>
+                <p class="price">￥100.00元</p>
+                <P class="date" >有效期至：2021-5-1</P>
+            </div>
+            <p class="category">[店铺类][商城类]</p>
+        </div>
+        <div class="info">
+            <div>
+                <p class="price">￥100.00元</p>
+                <P class="date" >有效期至：2021-5-1</P>
+            </div>
+            <p class="category">[店铺类][商城类]</p>
+        </div>
+        <div class="info">
+            <div>
+                <p class="price">￥100.00元</p>
+                <P class="date" >有效期至：2021-5-1</P>
+            </div>
+            <p class="category">[店铺类][商城类]</p>
+        </div>
+        <div class="info">
+            <div>
+                <p class="price">￥100.00元</p>
+                <P class="date" >有效期至：2021-5-1</P>
+            </div>
+            <p class="category">[店铺类][商城类]</p>
+        </div>
+        <div class="info">
+            <div>
+                <p class="price">￥100.00元</p>
+                <P class="date" >有效期至：2021-5-1</P>
+            </div>
+            <p class="category">[店铺类][商城类]</p>
+        </div>
+        <div class="info">
+            <div>
+                <p class="price">￥100.00元</p>
+                <P class="date" >有效期至：2021-5-1</P>
+            </div>
+            <p class="category">[店铺类][商城类]</p>
+        </div>
+        <div class="info">
+            <div>
+                <p class="price">￥100.00元</p>
+                <P class="date" >有效期至：2021-5-1</P>
+            </div>
+            <p class="category">[店铺类][商城类]</p>
+        </div>
+        <div class="info">
+            <div>
+                <p class="price">￥100.00元</p>
+                <P class="date" >有效期至：2021-5-1</P>
+            </div>
+            <p class="category">[店铺类][商城类]</p>
+        </div>
+        <div class="info">
+            <div>
+                <p class="price">￥100.00元</p>
+                <P class="date" >有效期至：2021-5-1</P>
+            </div>
+            <p class="category">[店铺类][商城类]</p>
+        </div>
+        
+    </div>
+</body>
+</html>

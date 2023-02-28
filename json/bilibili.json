@@ -1,0 +1,412 @@
+{
+    "code": 0,
+    "data": {
+        "has_next": 1,
+        "list": [
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/99ccd84c1d2374d39d12debb53d6adc51eff7756.png",
+                "index_show": "2019-03-22上映",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss41160?theme=movie",
+                "media_id": 28236866,
+                "order": "9.9分",
+                "order_type": "4",
+                "season_id": 41160,
+                "season_type": 2,
+                "title": "波西米亚狂想曲 ",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/2e800bc5154dcaad24a46d33e2af82be7aa9a2e9.png",
+                "index_show": "2021-12-25上映",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss40028?theme=movie",
+                "media_id": 28235728,
+                "order": "9.9分",
+                "order_type": "4",
+                "season_id": 40028,
+                "season_type": 2,
+                "title": "紫罗兰永恒花园 剧场版 ",
+                "title_icon": ""
+            },
+            {
+                "badge": "限时免费",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "限时免费"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/bb6500ef4e9d727a61de0d15f49cc809a1f2a921.jpg",
+                "index_show": "全1集",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss39929?theme=movie",
+                "media_id": 28235623,
+                "order": "9.9分",
+                "order_type": "4",
+                "season_id": 39929,
+                "season_type": 3,
+                "title": "无尽攀登",
+                "title_icon": ""
+            },
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/2582186b41190166891c785ba241de746b8e299a.png",
+                "index_show": "1982",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss39921?theme=movie",
+                "media_id": 28235615,
+                "order": "9.9分",
+                "order_type": "4",
+                "season_id": 39921,
+                "season_type": 2,
+                "title": "茶馆",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/795e42ab56785eb356e4060bf605e2fd6059dab1.png",
+                "index_show": "2021-11-05上映",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss39733?theme=movie",
+                "media_id": 28235427,
+                "order": "9.9分",
+                "order_type": "4",
+                "season_id": 39733,
+                "season_type": 2,
+                "title": "天书奇谭",
+                "title_icon": ""
+            },
+            {
+                "badge": "限时免费",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "限时免费"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/b239c6bceb51d3925b2da5fa2f095bed8551dc19.png",
+                "index_show": "2021-09-03上映",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss39653?theme=movie",
+                "media_id": 28235347,
+                "order": "9.9分",
+                "order_type": "4",
+                "season_id": 39653,
+                "season_type": 2,
+                "title": "1950他们正年轻",
+                "title_icon": ""
+            },
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/8fe21e1756bda452675d928fc78b824f2b0cbb3a.png",
+                "index_show": "2011-11-02上映",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss39557?theme=movie",
+                "media_id": 28235250,
+                "order": "9.9分",
+                "order_type": "4",
+                "season_id": 39557,
+                "season_type": 2,
+                "title": "触不可及",
+                "title_icon": ""
+            },
+            {
+                "badge": "独家",
+                "badge_info": {
+                    "bg_color": "#00C0FF",
+                    "bg_color_night": "#0B91BE",
+                    "text": "独家"
+                },
+                "badge_type": 1,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/b73871e9ec0b6430dabf5e7ea8882898b5ace313.png",
+                "index_show": "2021-05-20上映",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss39242?theme=movie",
+                "media_id": 28234934,
+                "order": "9.9分",
+                "order_type": "4",
+                "season_id": 39242,
+                "season_type": 2,
+                "title": "白蛇传·情",
+                "title_icon": ""
+            },
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/11d66f96e679b112de890ca0fa9fe1aaf6459872.png",
+                "index_show": "1994-12-22上映",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss39234?theme=movie",
+                "media_id": 28234926,
+                "order": "9.9分",
+                "order_type": "4",
+                "season_id": 39234,
+                "season_type": 2,
+                "title": "精武英雄",
+                "title_icon": ""
+            },
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/11ca834b8ee24f692fa824c6212477b1243d9b09.png",
+                "index_show": "2009-01-20上映",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss39192?theme=movie",
+                "media_id": 28234884,
+                "order": "9.9分",
+                "order_type": "4",
+                "season_id": 39192,
+                "season_type": 2,
+                "title": "疯狂的赛车",
+                "title_icon": ""
+            },
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/7f1d08372a4b2b7eb037e0be21a67fc8002c8d54.png",
+                "index_show": "2015-12-07上映",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss39161?theme=movie",
+                "media_id": 28234853,
+                "order": "9.9分",
+                "order_type": "4",
+                "season_id": 39161,
+                "season_type": 2,
+                "title": "八恶人",
+                "title_icon": ""
+            },
+            {
+                "badge": "",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": ""
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/88770d66cfe24bb0da889b333375845cba605921.png",
+                "index_show": "1930-08-24上映",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss39094?theme=movie",
+                "media_id": 28234786,
+                "order": "9.9分",
+                "order_type": "4",
+                "season_id": 39094,
+                "season_type": 2,
+                "title": "西线无战事",
+                "title_icon": ""
+            },
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/f41cf1edc884ae017de98713b941d57691efe53c.png",
+                "index_show": "1999-09-16上映",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss38249?theme=movie",
+                "media_id": 28233931,
+                "order": "9.9分",
+                "order_type": "4",
+                "season_id": 38249,
+                "season_type": 2,
+                "title": "我的1919",
+                "title_icon": ""
+            },
+            {
+                "badge": "会员专享",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": "会员专享"
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/78710b83b6d4884aefb4dd93dbd35f6ed08b5ae3.png",
+                "index_show": "1966-12-08上映",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss38010?theme=movie",
+                "media_id": 28233689,
+                "order": "9.9分",
+                "order_type": "4",
+                "season_id": 38010,
+                "season_type": 2,
+                "title": "虎口脱险",
+                "title_icon": ""
+            },
+            {
+                "badge": "",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": ""
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/6da9fa4526973bb34ccb6ccc97fc7f77f5b8a257.jpg",
+                "index_show": "1959-09-01上映",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss37747?theme=movie",
+                "media_id": 28233426,
+                "order": "9.9分",
+                "order_type": "4",
+                "season_id": 37747,
+                "season_type": 2,
+                "title": "卓别林短片精选",
+                "title_icon": ""
+            },
+            {
+                "badge": "",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": ""
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/96eeb4162d6303e366e5d6a5ec9d8e9b9885906b.jpg",
+                "index_show": "1966-03-14上映",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss37557?theme=movie",
+                "media_id": 28233233,
+                "order": "9.9分",
+                "order_type": "4",
+                "season_id": 37557,
+                "season_type": 2,
+                "title": "战争与和平",
+                "title_icon": ""
+            },
+            {
+                "badge": "",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": ""
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/9818e520c069ad9a215d2ee1e554b12d54c88fe8.png",
+                "index_show": "1963年",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss36132?theme=movie",
+                "media_id": 28231774,
+                "order": "9.9分",
+                "order_type": "4",
+                "season_id": 36132,
+                "season_type": 2,
+                "title": "农奴",
+                "title_icon": ""
+            },
+            {
+                "badge": "",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": ""
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/ddc3287f97304ee89acdd1f93e5d4301d30b31c0.png",
+                "index_show": "1960年",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss36044?theme=movie",
+                "media_id": 28231682,
+                "order": "9.9分",
+                "order_type": "4",
+                "season_id": 36044,
+                "season_type": 2,
+                "title": "刘三姐",
+                "title_icon": ""
+            },
+            {
+                "badge": "",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": ""
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/1793e5f2609daf63151f4619a2c7504db34b4a79.png",
+                "index_show": "1963年",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss35847?theme=movie",
+                "media_id": 28231472,
+                "order": "9.9分",
+                "order_type": "4",
+                "season_id": 35847,
+                "season_type": 2,
+                "title": "花为媒",
+                "title_icon": ""
+            },
+            {
+                "badge": "",
+                "badge_info": {
+                    "bg_color": "#FB7299",
+                    "bg_color_night": "#BB5B76",
+                    "text": ""
+                },
+                "badge_type": 0,
+                "cover": "http://i0.hdslb.com/bfs/bangumi/image/f914971fb4da18f50c87a963bdc3aefee5c94896.png",
+                "index_show": "1965年",
+                "is_finish": 1,
+                "link": "https://www.bilibili.com/bangumi/play/ss35774?theme=movie",
+                "media_id": 28231340,
+                "order": "9.9分",
+                "order_type": "4",
+                "season_id": 35774,
+                "season_type": 2,
+                "title": "东方红",
+                "title_icon": ""
+            }
+        ],
+        "num": 1,
+        "size": 20,
+        "total": 4200
+    },
+    "message": "success"
+}

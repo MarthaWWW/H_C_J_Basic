@@ -1,0 +1,101 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-26 15:27:31
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-26 15:49:49
+ * @FilePath: \code\front-end\javascript\back-to-top.html
+ * @Description: 回到顶部样例
+    1.滚动条超过临界点，顶部通栏显示，否则隐藏
+    2.滚动条超过临界点，回到顶部按钮显示，否则隐藏
+    3.点击回到顶部按钮，滚动条滚动回到顶部
+    
+    布局结构：
+    1.需要一个顶部通栏标签和一个回到顶部按钮标签
+    2.让页面超过浏览器可视窗口高度
+    3.设置顶部通栏样式，默认是在超出页面
+    4.设置回到顶部按钮样式，默认是在隐藏的
+
+    代码逻辑：
+    1.给浏览器绑定滚动事件，实时获取浏览器卷去的高度
+    2.判断卷去的高度决定隐藏还是显示
+    3.给回到顶部按钮绑定点击实践
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+
+        body{
+            height:1000px;
+        }
+
+        .header{
+            width:100%;
+            height:80px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color:deepskyblue;
+            font-size:30px;
+            color:#fff;
+            transition: top .3s linear;/*实现动画效果*/
+            position:fixed;/**固定定位,脱离文档流，相对于窗口位置不变**/
+            top:-80px;
+            left:0;  
+        }
+
+        .goTop{
+            width:50px;
+            height:50px;
+            background-color:pink;
+            font-size:20px;
+            text-align:center;
+            line-height:25px;
+            color:#fff;
+            
+            position:fixed;
+            bottom:50px;
+            right:50px;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">顶部通栏</div>
+    <div class="goTop">回到顶部按钮</div>
+    <script>
+        var header=document.querySelector('.header')
+        var goTop=document.querySelector('.goTop')
+        //绑定滚动事件
+        window.onscroll=function()
+        {
+            var height=document.documentElement.scrollTop||document.body.scrollTop
+            
+            if(height>=300)
+            {
+                //通过设置行内样式的方式，使其显示
+                header.style.top='0px'
+                goTop.style.display='block'
+            }
+            else{
+                header.style.top='-80px'
+                goTop.style.display='none'
+            }
+        }
+        //绑定点击事件
+        goTop.onclick = function()
+        {
+            window.scrollTo({top:0,behavior:'smooth'})
+        }
+    </script>
+</body>
+</html>

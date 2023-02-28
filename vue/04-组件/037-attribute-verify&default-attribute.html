@@ -1,0 +1,61 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-30 15:52:08
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-05-01 14:07:26
+ * @FilePath: \code\front-end\vue\037-attribute-verify&default-attribute.html
+ * @Description: 属性验证&默认属性
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <!-- 根组件的dom结构 -->
+    <div id="box">
+        <navbar myname="电影" :myright=false></navbar>
+        <!-- 这里的myname相当于函数传参 -->
+        <!-- 注意布尔值属性的写法，是动态绑定，要用v-bind(:) -->
+        <!-- 同一个组件传不同的属性，就形成了不同的dom元素 -->
+        <navbar myname="影院"></navbar>
+    </div>
+    <script>
+        //先注册再实例化
+        Vue.component("navbar",{
+            //props:["myname","myright"],//父组件传给子组件的参数数组
+            props:{
+                myname:{
+                    type:String,
+                    default:""
+                },
+
+                myright:{
+                    type:Boolean,
+                    default:true
+                }
+            },//接受属性，进行属性验证，在调用不当时会报错
+            //默认属性
+
+            template:`<div>
+                <button>left</button>
+                <span>{{myname}}</span>
+                <button v-show="myright">right</button>
+                </div>`
+        })
+        new Vue({
+            el:"#box",
+            data:{
+            },
+
+            methods:{
+                
+            }
+        })
+    </script>
+</body>
+</html>

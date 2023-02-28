@@ -1,0 +1,80 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-05-01 16:25:03
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-05-02 16:14:05
+ * @FilePath: \code\front-end\vue\053-lifecycle-update.html
+ * @Description: 生命周期-更新阶段
+    运行阶段的生命周期
+    Vue的钩子函数
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        {{myname}}
+        {{globalName}}
+        <button @click="myname='xiaoming'">change</button>\
+        <!-- 点击更新按钮，但是之前的流程不会再走一遍 -->
+    </div>
+    <script>
+        //根组件
+        new Vue({
+            el:"#box",
+            data:{
+                
+                myname:"Martha"
+            },
+            beforeCreate(){
+                console.log("beforeCreate",this.myname)
+            },
+            //啥都访问不到，没有意义
+
+            created(){
+                console.log("created",this.myname,"状态初始化或者是挂载到当前实例的一些属性")
+                this.myname=this.myname+"hahaha"
+                this.globalName="this可以直接访问的属性值"
+            },
+            //可以从localStorage和cookie中取值
+
+            //has 'el' option?
+            //has template option?
+
+            //new Vue只是把template放在外面(el)
+
+            beforeMount(){
+            },
+            //beforeMount可以拿到解析完的dom节点，但是没有什么意义
+            
+            
+            mounted(){
+                console.log(document.getElementById("box"))
+            },
+            //可以拿到真实的dom节点
+            //有些库需要依赖于创建完成的dom做初始化，比如轮播插件
+            //订阅bus.$on
+            //发ajax
+            //状态立即更新，dom异步更新
+
+            beforeUpdate(){
+                console.log("beforeUpdate","更新之前")
+            },
+            //可以访问老的dom节点，记录老的dom的状态，比如滚动条位置记录
+            //只要有状态更新就会执行
+
+            Updated(){
+                console.log("更新完成")
+            }
+            //获取更新后的dom,才进行swiper工作的插件
+            //在这里才是真正完成新增节点上树
+        })
+    </script>
+</body>
+</html>

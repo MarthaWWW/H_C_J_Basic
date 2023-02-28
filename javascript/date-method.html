@@ -1,0 +1,70 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-25 19:56:28
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-25 20:28:34
+ * @FilePath: \code\front-end\javascript\date-method.html
+ * @Description: 时间常用方法
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var time=new Date()
+        console.log(time)
+        var t=new Date(2019,11,20,18,50,11)
+        console.log(t)
+        //获取
+        //getFullYear()  获取时间对象中的年份信息
+        console.log(time.getFullYear())
+
+        //getMonth()  获取时间对象的月份信息，从0开始
+        console.log(time.getMonth())
+
+        //getDate()  获取时间对象的日期信息
+        console.log(time.getDate())
+
+        //getHours()
+        //getMinutes()
+        //getSeconds()
+
+        //getDay()  获取时间对象的星期信息
+        console.log(time.getDay())
+
+        //getTime()  获取时间对象的时间戳信息,从1970.1.1.0.0.0开始
+        //过了多少毫秒
+        console.log(time.getTime())
+
+        //设置
+        //除了getDay()都有对应的set方法
+        //可以通过setTime()时间戳方法直接定位时间节点
+        t.setTime(5211314)
+        console.log(t)
+        //我好土
+
+        //封装函数，获取两个时间节点之间的时间差
+        //使用时间戳相减的方法、
+        function gap(time1,time2)
+        {
+            var t1=time1.getTime()
+            var t2=time2.getTime()
+            var gap=Math.ceil((t1-t2)/1000)
+            var day=Math.floor(gap/(60*60*24))
+            var hour=Math.floor(gap%(60*60*24)/(60*60))
+            var minute=Math.floor(gap%(60*60)/60)
+            console.log(gap,day,hour,minute)
+        }
+        var time1=new Date()
+        var time2=new Date(2001,10,10,0,0,0)
+        gap(time1,time2)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-04 19:47:36
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-04 19:59:40
+ * @FilePath: \code\.vscode\front-end\width-self-adaptive.html
+ * @Description:宽高自适应：宽度 
+   网页布局中经常要要求元素的宽和高，但很多时候会我们希望元素的大小能够根据窗口或子元素自动调整（自适应）
+   宽度自适应：元素宽度的默认值为auto，主要应用在导航栏和通栏布局
+   高度自适应：元素高度的默认值为auto
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+
+    div{
+      /* width:100px; */
+      width:auto;/*不写或者auto是自适应，不会出现横线滚动条，会自己调整宽度*/
+      /* width:100%; */
+      height:100px;
+      padding-left:100px;
+      /*在设置成100%的情况下，增加padding,页面被撑开，下方出现横向滚动条*/
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>

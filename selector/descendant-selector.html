@@ -1,0 +1,54 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-05 21:33:57
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-05 21:45:16
+ * @FilePath: \code\.vscode\front-end\descendant-selector.html
+ * @Description: 层级选择器
+    如何精准的找出目标标签
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 子代选择器：仅选择第一层 */
+        .box>li{
+            border: 1px solid red;
+        }
+        /* + 找到当前节点的第一个兄弟节点，后加节点类型*/
+        /* .child+li{
+            background-color: yellow;
+        } */
+
+        /* ~ 当前元素的所有的兄弟节点 */
+        .container~p{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul class="box">
+        <li>111
+            <ul>
+                <li>111-111</li>
+                <li>222-222</li>
+                <li>333-333</li>
+            </ul>
+        </li>
+        <li class="child">222</li>
+        <li>333</li>
+        <li>444</li>
+
+        <div class="container">11111</div>
+        <p>p-1</p>
+        <p>p-2</p>
+        <div>
+            <p>p-33</p>
+        </div>
+    </ul>
+</body>
+</html>

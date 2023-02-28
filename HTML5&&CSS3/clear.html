@@ -1,0 +1,56 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-03-21 18:29:21
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-03-21 18:42:10
+ * @FilePath: \code\.vscode\hao\clear.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by Martha, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1,.box2{
+            height:200px;
+            width:200px;
+            float: left;
+        }
+        .box1{
+            background-color: yellow;
+        }
+        .box2{
+            background-color: blue;
+        }
+        .box{
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            /*clear:left;*/
+        }
+        .container{
+            overflow:hidden;
+            /*bfc:让浮动元素计算高度*/
+        }
+        /*
+        1.写固定高度
+        2.清浮动 clear: none left right both
+        3.在浮动元素群后加上空div ,属性clear
+        4.overflow:hidden
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <!--<div style="clear:left"></!--div>-->
+    </div>
+    <div class="box"></div>
+</body>
+</html>

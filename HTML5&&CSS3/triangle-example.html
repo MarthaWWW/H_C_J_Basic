@@ -1,0 +1,72 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-04 15:54:51
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-04 16:18:28
+ * @FilePath: \code\.vscode\front-end\triangle-example.html
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div{
+            width:0px;
+            height:0px;
+            border-top: 20px solid red;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+        } */
+            /*观察四个角的特殊形式*/
+            /*不断缩小宽高获得四个三角形*/
+            /*设置其他三个部分背景色为透明，最终获得想要的三角形*/
+        
+        /*
+        等效写法
+        div{
+            width:0px;
+            height:0px;
+            border: 20px solid transparent;
+            border-top: 20px solid red;
+        }
+        */
+        .box{
+            width:100px;
+            height:50px;
+            line-height: 50px;
+            background-color: lightskyblue;
+            color: white;
+            text-indent:20px;
+        }
+
+        span{
+            width:0;
+            height:0;
+            display: inline-block;
+            border: 5px solid transparent;
+            border-top: 5px solid white;
+            position: relative;
+            top:2.5px;/*与初值相比往下移动2.5px*/
+
+        }
+
+        .box:hover span{
+            border: 5px solid transparent;
+            border-bottom: 5px solid white;
+            position: relative;
+            top:-2.5px;/*与初值相比往上移动2.5px*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        导航
+        <span></span><!--写div会换行-->
+    </div>
+</body>
+</html>

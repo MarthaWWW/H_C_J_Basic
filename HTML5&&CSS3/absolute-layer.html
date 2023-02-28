@@ -1,0 +1,65 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-04 16:26:34
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-04 16:35:23
+ * @FilePath: \code\.vscode\front-end\absolute-layer.html
+ * @Description: 绝对定位在层级上的应用
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        /*父子关系*/
+        .box1{
+            width:200px;
+            height:200px;
+            background-color: aquamarine;
+            position: relative;
+            /*z-index:100;在父子关系中层级属性失效*/
+        }
+
+        .child{
+            width:100px;
+            height:100px;
+            background-color: bisque;
+            position:absolute;
+            z-index:-1;/*通过设置子盒子为负数来解决层级问题*/
+        }
+        /*兄弟关系*/
+        .box2{
+            width:200px;
+            height:200px;
+            background-color: rebeccapurple;
+            position: absolute;
+            top:200px;
+            left:0;
+        }
+
+        .box3{
+            width:200px;
+            height:200px;
+            background-color: darkkhaki;
+            position: absolute;
+            top:300px;
+            left:100px;
+        }
+        /*兄弟的z-index是纯数值层级关系*/
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="child"></div>
+    </div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

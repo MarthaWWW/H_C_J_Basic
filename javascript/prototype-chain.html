@@ -1,0 +1,32 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-27 16:29:59
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-27 16:37:53
+ * @FilePath: \code\front-end\javascript\prototype-chain.html
+ * @Description: 原型链
+    1.实例对象身上的__proto__指向谁？
+       指向所属构造函数的prototype
+       p1所属构造函数是Person
+       p1.__proto__指向Person.prototype
+    2.Person.prototype的 __proto__指向谁？
+      Person.prototype是一个Object
+      在JS内所有的Object数据类型都是属于Object这个内置构造函数
+      
+    3.Person的__proto__指向谁？
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(){}
+        var p1=new Person()
+    </script>
+</body>
+</html>

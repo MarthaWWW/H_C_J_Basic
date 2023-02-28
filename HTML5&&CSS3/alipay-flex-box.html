@@ -1,0 +1,129 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-10 09:37:43
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-14 09:39:59
+ * @FilePath: \code\front-end\alipay-flex-box.html
+ * @Description: 支付宝弹性盒
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        .box{
+            height: 1420px;;
+            width: 955px;
+            display: flex;
+            margin:0 auto;
+            flex-direction: column;
+            background-color: yellow;
+           
+        }
+        
+        header{
+            height:124px;
+            display: flex;
+            color: white;
+            background-color: #232939;
+        }
+
+        header .iconfont{
+            width:118px;
+            height:124px;
+            line-height: 124px;
+            text-align:center;
+            font-size: 48px;        
+        }
+
+        header span{
+            flex:1;
+            line-height: 124px;
+            font-size: 40px;
+        }
+
+        footer{
+            height:128px;
+            background-color: grey;
+        }
+
+        section{
+            flex:1;
+        }
+
+        .main{
+            display: flex;
+            height:278px;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #232939;
+        }
+
+        .main div{
+            width: 120px;
+            height:168px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .main div .iconfont{
+            font-size: 110px;
+            text-align: center;
+            color:white;
+        }
+
+        .main div span{
+            font-size: 32px;
+            text-align: center;
+            color:white;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <header>
+            <i class="iconfont icon-content"></i>
+            <span>账单</span>
+            <i class="iconfont icon-me"></i>
+            <i class="iconfont icon-search"></i>
+            <i class="iconfont icon-add"></i>
+        </header>
+        <section>
+            <div class="main">
+                <div>
+                    <i class="iconfont icon-scan"></i>
+                    <span>扫一扫</span>
+                </div>
+                <div>
+                    <i class="iconfont icon-scan"></i>
+                    <span>扫一扫</span>
+                </div>
+                <div>
+                    <i class="iconfont icon-scan"></i>
+                    <span>扫一扫</span>
+                </div>
+                <div>
+                    <i class="iconfont icon-scan"></i>
+                    <span>扫一扫</span>
+                </div>
+            </div>
+
+            <div class=""></div>
+            <div></div>
+        </section>
+        <footer></footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-03-29 10:55:31
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-04 21:26:09
+ * @FilePath: \code\.vscode\front-end\secondary-menu.html
+ * @Description: 二级菜单，实现隐藏子菜单和hover变色
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        .box{
+            width:300px;
+            margin:0 auto;
+            /*overflow: hidden;    解决浮动带来的高度塌陷问题*/
+        }
+
+        ul{
+            list-style:none; 
+        }
+
+        .box .item{
+            float:left;
+            width:148px;
+            text-align: center;
+            border:1px solid blue;
+            background: blue;
+            line-height: 40px;
+            color:aliceblue;
+        }
+
+        .item:hover{
+            background-color: lightblue;
+        }
+
+        .item>ul{/*>是子代选择器，只能选中下面一代 空格使后代选择器，选择所有*/
+            background-color: aliceblue;
+            color:black;
+            display: none;
+        }
+
+        .item:hover ul{
+            display: block;
+            
+        }
+
+        .item li:hover{
+            color:blue;
+        }
+
+        .content{
+            height:100px;
+            background-color: aquamarine;
+        }
+
+        .box>li{
+            position:relative;
+        }
+
+        .box>li>ul{
+            position: absolute;
+            width:148px;
+            top:40px;
+        }
+
+        .box::after{
+            content: "";
+            display: block;
+            width:0;
+            height:0;
+            visibility:hidden;
+            /*避免内部元素的显示*/
+            clear: both;/*清浮动并设置为块元素*/
+            /*清浮动：解决父级元素因为子级浮动而引起的内部高度为0的问题,是伪元素解决方案的中心*/
+        }
+        
+    </style>
+</head>
+<body>
+    <ul class="box">
+        <li class="item">视频教程
+            <ul>
+                <li>全部视频教程</li>
+                <li>HTML视频教程</li>
+                <li>JAVA视频教程</li>
+                <li>Python视频教程</li>
+            </ul>
+        </li>
+        <li class="item">认证考试
+            <ul>
+                <li>pmp</li>
+                <li>红帽</li>
+            </ul>
+        </li>
+    </ul>
+    <div class="content">1111111111111111111</div>
+</body>
+</html>

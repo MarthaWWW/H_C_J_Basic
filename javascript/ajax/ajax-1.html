@@ -1,0 +1,41 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-27 20:04:34
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-27 20:18:56
+ * @FilePath: \code\front-end\javascript\ajax\ajax-1.html
+ * @Description: Ajax-1
+    Ajax
+    1.创建ajax对象
+      var xhr = new XMLHttpRequest()
+    2.配置本次请求信息
+      xhr.open(请求方式，请求地址，是否异步)
+    3.注册请求完成事件
+      xhr.onload = function(){}
+    4.把请求发送出去
+      xhr.send()
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var xhr = new XMLHttpRequest()
+        //下面三个参数按照接口文档进行书写
+        //请求地址：基准地址+请求地址
+        xhr.open('GET','http://127.0.0.1:5500/front-end/javascript/ES6/ES6-spread-operator',true)
+        xhr.onload = function(){
+            //在本次请求发送到服务器，并且请求信息返还到浏览器，触发、
+            //如何拿到后端返回的信息
+            //语法：xhr.responseText表示后端给我们的信息
+            console.log('请求完成')
+        }
+        xhr.send()
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-05 22:07:06
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-06 19:22:32
+ * @FilePath: \code\.vscode\front-end\structural-pseudo-class-selector.html.html
+ * @Description: 结构伪类选择器
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 940px;
+            height: 100px;
+            margin: 0 auto;
+            background-color: yellow;
+        }
+
+        .box div{
+            float:left;
+            width:300px;
+            height:100px;
+            background-color: red;
+            margin-right:20px;
+        }
+
+        .box div:last-child{
+            margin-right: 0px;
+        }
+        /* 最后一个孩子 */
+
+        li:first-child{
+            background-color: aquamarine;
+        }
+        /* 第一个孩子 */
+
+        li:nth-child(2){
+            background-color: blue;
+        }
+        /* 指定第几个 */
+
+        li:nth-child(2n){
+            background-color: aliceblue;
+        }
+        /* 指定偶数个 2n/even*/
+
+        li:nth-child(2n+1){
+            background-color: rosybrown;
+        }
+        /* 指定奇数个 2n+1/odd */
+        /* 实现交替效果 */
+
+
+    </style>
+</head>
+<body>
+     <!-- 通过某种结构关系查找页面元素
+     比如：
+     匹配某元素第一个子元素
+     匹配某元素最后一个子元素 -->
+     <div class="box">
+         <div></div>
+         <div></div>
+         <div></div>
+     </div>
+
+     <ul>
+         <li>1</li>
+         <li>2</li>
+         <li>3</li>
+         <li>4</li>
+         <li>5</li>
+     </ul>
+</body>
+</html>

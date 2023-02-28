@@ -1,0 +1,52 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-29 14:14:38
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-29 17:09:38
+ * @FilePath: \code\front-end\vue\014-detect-array-change.html
+ * @Description: 检测列表变化
+    a.使用push()\pop()\shift()\unshift()\splice()\sort()\reverse()
+      操作数组，可以检测变动
+
+    b.filter()\concat()\slice()\map(),新数组代替旧数组，原数组没有改变
+    不会检测到变动，需要覆盖(=)
+
+    c.不能检测以下变动的数组
+       改变原数组某一项的数值，但是检测不到
+       datalist[0]="XXX"
+       方案1：datalist.splice(0,1,"XXX")
+       方案2：Vue.set(vm.datalist,0,"XXX")
+       vue3解决了这一问题   
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <!-- 实现模糊查询功能 -->
+    <div id="box">
+        <input type="text" @input="handleInput">
+        <!-- 绑定input行为对应的方法 -->
+    </div>
+    <script>
+        new Vue({
+            el:"#box",
+            data:{
+
+            },
+
+            methods:{
+                handleInput(){
+                    console.log("input")
+                    //es5 filter
+                }
+            }
+        })
+    </script>
+</body>
+</html>

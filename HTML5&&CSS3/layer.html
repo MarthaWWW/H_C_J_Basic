@@ -1,0 +1,42 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-04 16:18:47
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-04 16:25:15
+ * @FilePath: \code\.vscode\front-end\layer.html
+ * @Description: 层级概念
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;    
+        }
+
+        .box1{
+            background-color: yellow;
+            position:relative;
+            top:100px;
+            left:100px;
+            z-index:1;/*层级设置，按大小值排列层级，数值越大越上浮，可以有负值，默认值为0*/
+        }
+
+        .box2{
+            background-color: red;
+            position: relative;
+            /*红色盒子设置定位后浮在最上层，盖在黄色盒子上方*/
+        }
+        /*z-index必须和定位Position捆绑使用*/
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

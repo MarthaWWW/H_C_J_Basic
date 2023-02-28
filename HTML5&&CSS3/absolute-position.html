@@ -1,0 +1,58 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-03-31 21:30:40
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-03-31 21:40:58
+ * @FilePath: \code\.vscode\front-end\absolute-position.html
+ * @Description: 绝对定位
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+        .box{
+            width:200px;
+            height:200px;
+            background-color: aquamarine;
+            position:absolute;
+            top:100px;
+            left:100px;
+        }
+        .parent{
+            width:500px;
+            height:500px;
+            background-color: blueviolet;
+            margin:0 auto;
+            position:relative;/*父盒子也要有定位值，设置成relative*/
+        }
+        .child{
+            width:200px;
+            height:200px;
+            background-color: cornflowerblue;
+            position:absolute;
+            top:100px;
+            right:100px;
+        }
+    </style>
+</head>
+<body>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam provident laboriosam magnam iure in deserunt, perspiciatis quod, mollitia doloremque libero, at enim reiciendis corporis magni omnis ipsum eveniet animi accusamus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam voluptas culpa facere nemo et accusantium cupiditate aspernatur debitis nisi voluptatum dolores velit veritatis provident magni est obcaecati ipsum, perspiciatis nulla!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque modi nesciunt eos id, iure vitae voluptatem nostrum sequi quo recusandae? Laboriosam praesentium consequuntur deserunt debitis? Velit iure quaerat dolore! Similique.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae eos fugiat iste cum, pariatur culpa impedit, maxime dignissimos sit totam qui ad, consequuntur distinctio doloribus deserunt? Aliquid pariatur dolores qui.
+
+    </div>
+    <div class="box"></div>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-04 21:40:09
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-04 21:54:13
+ * @FilePath: \code\.vscode\front-end\double-column-layout.html
+ * @Description: 两栏布局1
+   左边宽度固定
+   右边宽度可以跟着窗口大小自动适应
+   这种布局在后台系统非常常见
+   margin方案
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        html,body{
+            height:100%;
+        }
+
+        .box1{
+            width:200px;
+            height:100%;
+            background-color: coral;
+            float:left;
+        }
+
+        .box2{
+            height:100%;
+            background-color: darkmagenta;
+            margin-left:200px;/*使用外边距将左栏的位置空出*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

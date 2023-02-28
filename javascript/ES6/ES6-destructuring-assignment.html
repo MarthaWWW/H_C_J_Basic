@@ -1,0 +1,33 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-27 17:09:25
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-27 19:32:45
+ * @FilePath: \code\front-end\javascript\ES6\ES6-destructuring-assignment.html
+ * @Description: ES6解构赋值
+    分为数组的解构和对象的解构
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.解构数组
+        var arr=['hello','world']
+        var [a,b] = arr
+        console.log(a)
+        console.log(b)
+
+        //2.结构对象
+        var obj={name:'jack',age:18}
+        var {name,age} = obj
+        //定义一个a变量，从obj内获取一个叫做age的值
+        var {age:a} = obj
+    </script>
+</body>
+</html>

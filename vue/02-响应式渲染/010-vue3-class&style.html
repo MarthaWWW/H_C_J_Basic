@@ -1,0 +1,85 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-29 14:12:07
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-29 15:36:23
+ * @FilePath: \code\front-end\vue\010-vue3-class&style.html
+ * @Description: vue3 class&style
+    vue3 支持动态增加属性的拦截
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.next.js"></script>
+    <style>
+    .aa{
+
+    }
+
+    .bb{
+
+    }
+
+    .cc{
+
+    }
+
+    .dd{
+
+    }
+    </style>
+
+</head>
+<body>
+    <div id="box">
+        <div>{{myname}}</div>
+        <button @click="handleAdd">add</button>
+        <div :class="classobj">动态切换class-1-对象</div>
+        <div :class="classarr">动态切换class-2-数组</div>
+        <div :style="styleobj">动态切换style-1-对象</div>
+        <div :style="stylearr">动态切换style-2-数组</div>
+    </div>
+    <script>
+        //vue3抛弃了面向对象的思想
+        //剩余的语法和vue2没有区别
+        var obj={
+            //函数式写法
+            data(){
+                return {
+                    myname:"Martha",
+                    classobj:{
+                    aa:true,
+                    bb:true,
+                    cc:false
+                    },
+                    classarr:["aa","bb"],
+
+                    styleobj:{
+                      backgroundColor:'red'
+                    },
+
+                    stylearr:[{backgroundColor:'yellow'}]
+                    }          
+            },
+
+            methods:{
+                handleAdd()
+                {
+                    this.classobj.dd=true//后期动态添加属性
+                    //基于proxy方案的动态拦截，不用处理第三方的set拦截方案
+                    this.styleobj.backgroundColor="blue"
+                }
+
+            }
+
+        }
+        Vue.createApp(obj).mount("#box")
+        //创造VueApp并且挂接到盒子节点
+    </script>
+</body>
+</html>
+</html>

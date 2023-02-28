@@ -1,0 +1,68 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-29 14:15:54
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-29 19:48:51
+ * @FilePath: \code\front-end\vue\015-fuzzy-query.html
+ * @Description: 模糊查询
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <!-- 实现模糊查询功能 -->
+    <div id="box">
+        <input type="text" @input="handleInput" v-model="mytext">
+        <!-- 绑定input行为对应的方法 -->
+        <ul>
+            <li v-for="data in datalist" :key="data">
+                {{data}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el:"#box",
+            data:{
+                datalist:[
+                    "aa",
+                    "abc",
+                    "acd",
+                    "adddd",
+                    "bbb",
+                    "ba",
+                    "bca",
+                    "bddd"
+                ],
+                originlist:[
+                    "aa",
+                    "abc",
+                    "acd",
+                    "adddd",
+                    "bbb",
+                    "ba",
+                    "bca",
+                    "bddd"
+                ],
+                mytext:'',
+
+            },
+
+            methods:{
+                handleInput(){
+                    console.log("input")
+                    //es5 filter
+                    this.datalist = this.originlist.filter(item=>item.includes(this.mytext))
+                    console.log(this.mytext)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-29 14:13:44
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-29 16:44:25
+ * @FilePath: \code\front-end\vue\013-key-setting.html
+ * @Description: key设置
+    原始数据---虚拟dom---真实dom
+    虚拟dom:用js对象来描述节点
+    {
+        tag:"li"
+        text:"Martha"
+    },
+    ...
+    更新数据产生新的虚拟dom
+    对比虚拟dom,找出不同，做出patch补丁，以最小的代价更新到真实dom中
+    创建真实dom的代价太大
+    虚拟dom的比对方法并不智能---一一比对
+    故通过设置key的方式提高做出patch补丁的效率
+    跟踪每个节点的身份，从而重用和重新排列现有元素
+    理想的Key值每项都有且唯一的id(data.id)
+    真正的后端传来的数据一定是对象结构的
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        <ul>
+            <li v-for="(item,index) of datalist" :key="item">
+                {{item}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el:"#box",
+            data:{
+                datalist:[
+                    "Martha",
+                    "Heather",
+                    "Felicity"
+                ]
+            },
+
+            methods:{
+                
+            }
+        })
+    </script>
+</body>
+</html>

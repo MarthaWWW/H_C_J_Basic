@@ -1,0 +1,115 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-30 15:55:31
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-05-01 16:18:07
+ * @FilePath: \code\front-end\vue\041-central-event-bus.html
+ * @Description: 中央事件总线
+    如何应对复杂的组件关系之间的通信
+    1.bus 中央事件总线,发布订阅模式
+    bus=new Vue()
+    两者必须有一个订阅者，一个发布者
+    bus.$on("martha",()=>{})//监听
+    bus.$emit("martha ")//触发
+    监听martha事件
+    2.vuex 状态管理：共享状态放在外部统一管理
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+    <script src="../lib/axios.min.js"></script>
+    <style>
+        img{
+            width:100px;
+            height:140px;
+
+        }
+
+        .film-detail{
+            border:1px solid black;
+            width:300px;
+            min-height:200px;
+            background:yellow;
+            position: fixed;
+            top:100px;
+            right:50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <button @click="handleClick">ajax-fetch</button>
+        <film-item v-for="actor in actorlist" :actor="actor"></film-item>
+        <film-detail></film-detail>
+
+    </div>
+    
+    <script>
+        var bus=new Vue()
+        Vue.component("filmItem",{
+            props:["actor"],
+            template:`
+            <div style="border:1px solid black;width:500px;">
+            {{actor.name}}
+            {{actor.role}} <br>
+            <img :src="actor.avatarAddress" alt=""><br>
+            <button @click="handleClick">详情</button>
+            </div>
+            `,
+            methods:{
+                handleClick(){
+                    bus.$emit("martha",this.actor.avatarAddress)
+            }
+            }
+        })
+
+        Vue.component("filmDetail",{
+            data(){
+                return {
+                    info:""
+                }
+            },
+            //生命周期函数
+            mounted(){
+                bus.$on(
+                    "martha",
+                    (data)=>{
+                        this.info=data
+                        console.log(this.info)
+                    }
+                )
+            },
+            template:`
+            <div class="film-detail">
+                {{info}}
+            </div>`,
+        
+
+
+        })
+        new Vue({
+            el:"#box",
+            data:{
+                actorlist:[],
+            },
+
+            methods:{
+                handleClick(){
+                    axios.get("../json/maizuo.json") 
+                    .then(res=>{
+                        this.actorlist=res.data.data.film.actors//res.data等价于fetch中的第2个res
+                    }) 
+                },
+
+            
+            }
+        })
+    </script>
+</body>
+</html>
+

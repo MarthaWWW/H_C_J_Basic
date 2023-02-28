@@ -1,0 +1,75 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-30 15:53:28
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-05-01 15:16:12
+ * @FilePath: \code\front-end\vue\038-son-transmit-to-father-scene.html
+ * @Description: 子传父场景
+    父传子的最后一个知识点：通过专门的属性（myparent）将父组件的变量传入
+
+    父传子靠属性，子传父靠事件
+    vant---Vue组件库
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <!-- 根组件的dom结构 -->
+    <div id="box">
+        <navbar @myevent="handleEvent" ></navbar>
+        <sidebar v-show="isShow"></sidebar>
+    </div>
+    
+    <script>
+        Vue.component("navbar",{
+            template:`
+            <div style="background-color:red;">
+                <button @click="handleClick()">点击</button>-导航栏
+                </div>`,
+            methods:{
+                handleClick(){
+                    this.$emit("myevent")  
+                    // this.$emit("myevent",1000000)  可以顺带传递数据给父组件
+            }
+        }
+        
+        })
+
+        Vue.component("sidebar",{
+            template:`
+        <ul>
+            <li>001</li>
+            <li>002</li>
+            <li>003</li>
+            <li>004</li>
+            <li>005</li>
+            <li>006</li>
+            <li>007</li>
+            <li>008</li>
+            <li>009</li>
+            <li>010</li>
+        </ul>
+            `
+        })
+        new Vue({
+            el:"#box",
+            data:{
+                isShow:true
+            },
+
+            methods:{
+                handleEvent(){
+                    this.isShow=!this.isShow
+                }
+            }
+        })
+    </script>
+</body>
+</html>
+

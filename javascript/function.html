@@ -1,0 +1,32 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-15 09:13:18
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-15 09:22:31
+ * @FilePath: \code\front-end\javascript\function.html
+ * @Description: 函数————一个承载代码的盒子，一种数据类型
+    函数定义阶段，函数执行阶段
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fn(){
+            console.log('这是一个函数')
+        }
+        fn()
+        //递归函数
+        function fn2(n){
+            if(n===1) return 1;
+            return n*fn2(n-1);
+        }
+        console.log(fn2(5))
+    </script>
+</body>
+</html>

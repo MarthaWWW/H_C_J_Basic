@@ -1,0 +1,54 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-05-02 15:32:48
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-05-02 16:38:16
+ * @FilePath: \code\front-end\vue\059-vue3-component.html
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.next.js"></script>
+    <style>
+    </style>
+
+</head>
+<body>
+    <div id="box">
+        {{myname}}
+    </div>
+    <navbar myname="aaaa">
+        <div>11111111</div>
+    </navbar>
+    <script>
+        var obj={
+            //函数式写法
+            data(){
+                return {
+                    myname:"martha"
+                }
+            },
+
+            methods:{
+            },
+
+
+        }
+        var app = Vue.createApp(obj)
+        app.component("navbar",{
+            props:["myname"],
+            template:`
+                <div>navbar--{{myname}}
+                    <slot></slot></div>
+            `
+        })
+        app.mount("#box")
+    </script>
+</body>
+</html>
+</html>

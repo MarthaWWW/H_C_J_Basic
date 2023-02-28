@@ -1,0 +1,74 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-26 15:52:23
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-26 16:09:25
+ * @FilePath: \code\front-end\javascript\all-check.html
+ * @Description: 全选
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        .box{
+            width:100px;
+            padding:20px;
+            border: 1px solid pink;
+            margin: 40px auto;
+        }
+
+        hr{
+            margin:10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <input type="checkbox">全选<br>
+        <hr>
+        <input type="checkbox">选项1<br>
+        <input type="checkbox">选项2<br>
+        <input type="checkbox">选项3<br>
+        <input type="checkbox">选项4<br>
+    </div>
+    <script>
+        var allBtn=document.querySelector('input')
+        var items=document.querySelectorAll('input:nth-child(n+2)')//从第二个开始
+        
+        allBtn.onclick = function()
+        {
+            var type = allBtn.checked   //获取checked属性
+            for(var i=0;i<items.length;i++)
+            {
+                items[i].checked=type
+            }
+        }
+
+        //循环给每一个按钮绑定点击事件
+        for(var i=0;i<items.length;i++)
+        {
+            items[i].onclick=function(){
+                var flag=true
+                for(var j=0;j<items.length;j++)
+                {
+                    if(items[j].checked===false)
+                    {
+                        flag=false
+                        break
+                    }
+                }
+                allBtn.checked=flag
+            }
+        }
+    </script>
+</body>
+</html>

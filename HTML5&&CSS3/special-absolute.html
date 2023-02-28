@@ -1,0 +1,35 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-04 16:36:11
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-04 16:40:24
+ * @FilePath: \code\.vscode\front-end\special-absolute.html
+ * @Description: 绝对定位的黑魔法
+ span作为行内元素，其宽高由内部元素的字体大小决定，但是如果设置成position:absolute,会变为块元素
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            width:200px;
+            height:100px;
+            background-color: yellow;
+            position:absolute;
+        }
+        /*
+        如何让行内元素变为块元素
+        1.display:block;
+        2.position:absolute;
+        3.float:left
+        */
+    </style>
+</head>
+<body>
+    <span>你好</span>
+</body>
+</html>

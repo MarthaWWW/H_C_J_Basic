@@ -1,0 +1,62 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-25 19:20:38
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-25 19:35:53
+ * @FilePath: \code\front-end\javascript\string-method.html
+ * @Description: 字符串常用方法
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //字符串.charAt(索引)
+        //获取对应索引位置的字符
+        //返回值是对应索引位置的字符
+        var str='Hello world'
+        console.log(str.charAt(3))
+
+        //字符串.toLowerCase()
+        //把字符串所有字母转为小写
+        //返回值是转换好的字符串，不会改变源字符串
+        console.log(str.toLowerCase())
+
+        //字符串.toUpperCase()
+        //把字符串所有字母转为大写
+        //返回值是转换好的字符串，不会改变源字符串
+        console.log(str.toUpperCase())
+
+        //字符串.replace(换下内容，换上内容)
+        //将字符串内第一个满足换下内容的片段替换成换上内容
+        //返回值是替换好的字符串，不会改变源字符串
+        console.log(str.replace('ello','ate'))
+
+        //字符串.trim()
+        //去除首尾空格
+        //返回值是去除空格后的字符串,不会改变源字符串
+        str1='   real'
+        console.log(str1.trim())
+
+        //字符串.split(分隔符)
+        //按照分隔符将字符串切割成为一个数组
+        console.log(str.split(' '))
+
+        //字符串.substr(开始索引，多少个)
+        //字符串.substring(开始索引，结束索引)
+        //字符串.slice(开始索引，结束索引)
+        //截取字符串
+        //返回值是截取后的字符串
+        console.log(str.substr(0,5))
+        //下面两者都遵循包前不包后原则
+        console.log(str.substring(0,5))
+        console.log(str.slice(0,5))
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-29 19:56:22
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-30 20:25:54
+ * @FilePath: \code\front-end\vue\029-fetch-post.html
+ * @Description: fetch-post
+    get   url路径   ?name=Martha&age=20
+    post  body请求体
+       (1)x-www-formurlencoded, name=Martha&age=20
+       (2)json, `{name:"Martha",age:20}`
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        <button @click="handleFetch">ajax-fetch</button>
+    </div>
+    <script>
+        new Vue({
+            el:"#box",
+            data:{
+
+            },
+
+            methods:{
+                handleFetch(){
+
+                }
+            }
+        })
+        /*
+        // post-1
+        fetch("**",{
+            method:'post',
+            header:{
+                "Content-Type":"application/x-www-form-urlencoded"
+            },
+            body:"name=Martha&age=20",
+        }).then(res=>res.json()).then(res=>{console.log(res)})
+        
+        
+        // post-2
+        fetch("https://www.bilibili.com/video/BV17z4y1D7Yj?p=458&spm_id_from=pageDriver",{
+            method:'post',
+            header:{
+                "Content-Type":"application/json"
+            },
+            body: JSON.stringify({
+                name:"Martha",
+                age:20
+            })
+        }).then(res=>res.json()).then(res=>{console.log(res)})
+        */
+    </script>
+</body>
+</html>
+

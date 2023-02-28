@@ -1,0 +1,36 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-27 14:24:22
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-27 15:00:07
+ * @FilePath: \code\front-end\javascript\Object Oriented\OO3.html
+ * @Description: 面向对象-3：构造函数的使用
+    1.构造函数和普通函数没有区别，只不过在调用的时候和new关键字连用
+    2.书写构造函数，函数名首字母大写
+    3.调用的时候，需要和new 关键字连用
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.
+        function person(){
+            console.log('hello world')
+        }
+
+        function Person(name,age){
+            this.name=name
+            this.age=age
+            this.sayHi=function(){console.log('hello world')}
+        }
+        var jack = new Person('Jack',18)
+        jack.sayHi()
+    </script>
+</body>
+</html>

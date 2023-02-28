@@ -1,0 +1,37 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-27 19:33:06
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-27 19:38:46
+ * @FilePath: \code\front-end\javascript\ES6\ES6-template-string.html
+ * @Description: ES6模板字符串
+    模板字符串
+      + ES6内新增的定义字符串的方式
+      + var str = `内容`
+    
+    区别
+      + 可以换行书写
+      + 可以直接在字符串内解析变量
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var s=`
+        hello 
+        world
+        `
+        console.log(s)
+
+        var age = 18
+        var s1 = `我叫王大锤,今年${age}岁`
+        console.log(s1)
+    </script>
+</body>
+</html>

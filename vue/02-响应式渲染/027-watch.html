@@ -1,0 +1,77 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-29 19:55:52
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-30 17:25:32
+ * @FilePath: \code\front-end\vue\027-watch.html
+ * @Description: watch--监听
+    计算属性computed要求立即得到新结果(同步)，但是在ajax中不好用(异步)，函数表达式也做不到
+    函数也要求立即执行显示在页面中
+    但是事件处理器却可以处理异步问题
+    辨析methods/computed/watch
+    1.最主要用法是事件绑定，逻辑计算，可以不用return，没有缓存
+    2.解决模板过重问题(重视结果)，必须有return,只求结果，有缓存，同步
+    3.监听一个值的改变(重视过程)，没有return，异步同步都可以
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <!-- 实现模糊查询功能 -->
+    <div id="box">
+        <input type="text" v-model="mytext">
+        <!-- 绑定input行为对应的方法 -->
+        <ul>
+            <li v-for="data in datalist" :key="data">
+                {{data}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el:"#box",
+            data:{
+                datalist:[
+                    "aa",
+                    "abc",
+                    "acd",
+                    "adddd",
+                    "bbb",
+                    "ba",
+                    "bca",
+                    "bddd"
+                ],
+                originlist:[
+                    "aa",
+                    "abc",
+                    "acd",
+                    "adddd",
+                    "bbb",
+                    "ba",
+                    "bca",
+                    "bddd"
+                ],
+                mytext:'',
+
+            },
+            watch:{
+                //监听mytext元素
+                mytext(newval)
+                {
+                    setTimeout(()=>{
+                        this.datalist = this.originlist.filter(item=>
+                        item.includes(newval))
+                    },2000)
+                    //设置两秒钟的延时
+                }
+            }
+        })
+    </script>
+</body>
+</html>

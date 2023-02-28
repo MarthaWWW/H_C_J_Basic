@@ -1,0 +1,109 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-25 21:36:01
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-26 15:26:47
+ * @FilePath: \code\front-end\javascript\DOM-method.html
+ * @Description: DOM基本操作
+    Document Object Model
+    一套操作文档流相关内容的属性和方法
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button>操作内容</button> -->
+    <div hello="world" style="width:100px; height:100px; background-color:pink">
+        <p>文本内容</p>
+    </div>
+    <button>操作属性</button>
+    <div id="box">div 标签</div>
+    <input type="password">
+    <script>
+        //获取元素的方式
+        //返回值是HTML元素,不存在时返回null
+        //根据id名称获取
+        document.getElementById('id名称')
+
+        //根据类名获取所有类名对应的元素，返回一个伪数组
+        document.getElementsByClassName('class名称')
+        var eles=document.getElementsByClassName('box')
+        console.log(eles)
+
+        //根据标签名获取所有标签名对应的元素，返回一个伪数组
+        document.getElementsByTagName('tag名称')
+
+        //根据选择器获取，第一个元素
+        document.querySelector('selector')
+
+        //根据选择器获取一组
+        document.querySelectorAll('selector')
+
+        //操作元素内容
+        //操作元素文本内容
+        //元素.innerText
+        //操作元素超文本内容
+        //元素.innerHTML
+        var ele=document.querySelector('div')
+        var btn=document.querySelector('button')
+        //获取元素的文本内容
+        //console.log(ele.innerText)
+        console.log(ele.innerHTML)
+        //给按钮绑定点击事件
+        btn.onclick=function(){
+            ele.innerHTML='<p>新内容</p>'
+        }
+        //此时网页的elements内容也会发生变化
+        
+        //操作元素属性
+        //原生属性
+        //获取：元素.属性名
+        //设置：元素.属性名='属性值'
+        var box=document.querySelector('div')
+        var inp=document.querySelector('input')
+        btn.onclick=function(){
+            box.id='content'
+            inp.type='checkbox'
+            box.setAttribute('hello','stupid')
+            ele.className='新内容'
+            box.style.backgroundColor='skyblue'
+        }
+
+        //自定义属性：没有特殊意义，只是在元素上记录信息
+        //获取：元素.getAttribute('属性名')
+        //设置：元素.setAttribute('属性名','属性值')
+        //删除：元素.removeAttribute('属性名')
+        var res=box.getAttribute('hello')
+        console.log(res)
+
+        //操作元素类名
+        //ele.className='box'
+
+        //操作元素的样式,这种方法仅适用于行内样式
+        console.log(box.style.width)
+        console.log(box.style.height)
+        console.log(box.style.backgroundColor)//需要改成驼峰命名法
+
+        //获取非行内样式
+        //window.getComputedStyle(元素).样式名
+        //没有设置非行内样式的方法
+        console.log(window.getComputedStyle(box).fontSize)
+
+    </script>
+    <div>一号</div>
+    <div class="box">二号</div>
+    <div class="box content">三号</div>
+    <div class="box" id="container">四号</div>
+    <div></div>
+</body>
+</html>

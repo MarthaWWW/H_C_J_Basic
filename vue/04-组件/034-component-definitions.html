@@ -1,0 +1,79 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-30 15:50:08
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-05-01 13:22:42
+ * @FilePath: \code\front-end\vue\034-component-definitions.html
+ * @Description: 组件定义
+    组件化思想
+    模块复用的三大件：dom/css/js
+    组件化可以将这三者封装到一起
+    <swiper></swiper>扩展HTML元素，封装可重用的代码
+    为了减少代码的重用
+
+    如何创建组件？
+    (1)全局创建组件
+    (2)局部创建组件
+
+    封装导航栏组件
+    即使没有复用，在功能足够独立的情况下也封装成一个组件
+    组件的引入可以使页面的dom结构变得清晰
+
+    (1)组件名无法使用驼峰命名法
+    (2)dom部分无法高亮显示和代码提示---使用单文件组件解决，那时可以拆成多块去写
+    (3)css只能写成行内
+    (4)template包含一个根节点
+    (5)自定义的组件data必须是一个函数
+    (6)组件与组件之间相互隔离
+    (7)组件必须放置在vue-el的管辖范围之内
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        <navbar></navbar>
+        <!-- 定义navbar组件 -->
+        <!-- <swiper></swiper> -->
+        <!-- 轮播组件 -->
+        <!-- <tabbar></tabbar> -->
+    </div>
+    <script>
+     
+        //定义一个全局组件
+        Vue.component("navbar",{
+            //dom,js,css
+            template:`<div style="background:red">
+                <button @click="handleLeft">left</button>
+                猫眼电影-{{myname}}
+                <button @click="handleRight">right</button>
+                </div>`,
+            methods:{
+                handleLeft(){
+                    console.log("left")
+                },
+
+                handleRight(){
+                    console.log("Right")
+                }
+            },
+            computed:{},
+            watch:{},
+            data(){
+                return {
+                    myname:"Martha"
+                }
+            }//组件中data必须是函数式写法
+        })
+        new Vue({
+            el:"#box",
+        })
+    </script>
+</body>
+</html>

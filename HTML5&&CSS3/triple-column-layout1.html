@@ -1,0 +1,48 @@
+<!--
+ * @Author: Martha
+ * @Date: 2022-04-04 21:54:32
+ * @LastEditors: Martha
+ * @LastEditTime: 2022-04-04 21:58:44
+ * @FilePath: \code\.vscode\front-end\triple-column-layout.html
+ * @Description: 三栏布局
+    左右固定，中间自适应
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        html,body{
+            height:100%;
+        }
+
+        .left,.right{
+            width:200px;
+            height:100%;
+            background-color: cyan;
+            float:left;
+        }
+
+        .center{
+            width:calc(100% - 400px);
+            height:100%;
+            background-color: darkblue;
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="left"></div>
+    <div class="center"></div>
+    <div class="right"></div>
+</body>
+</html>
